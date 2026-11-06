@@ -4,8 +4,8 @@
     "id": "laurel-center",
     "dir": "laurel-center",
     "entry": "laurel-center",
+    "clientId": "laurel-center",
     "settingsId": "laurel-center",
-    "category": "foundation",
     "title": {
       "zh": "Laurel 控制中心",
       "en": "Laurel Center"
@@ -14,43 +14,41 @@
       "zh": "模块商店、开关与独立更新。",
       "en": "Module store, switches and independent updates."
     },
+    "summary": {
+      "zh": "模块商店、开关与独立更新。",
+      "en": "Module store, switches and independent updates."
+    },
+    "scope": {
+      "zh": "模块商店、开关与独立更新。",
+      "en": "Module store, switches and independent updates."
+    },
+    "category": "foundation",
+    "order": 100,
+    "saveMode": "instant",
+    "defaultOn": false,
+    "hidden": false,
+    "retired": false,
     "releases": [
       {
         "version": "1.9.2",
-        "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/laurel-center-1.9.2.tgz",
         "sha256": "68f109a302c9913ce0c949954f80c0e8cdbaa1e24be9634b637b4e7e2a5c8f3d",
         "bytes": 1190003,
+        "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/laurel-center-1.9.2.tgz",
+        "centerApi": 1,
         "hostVersions": [
           "0.2.1-rc.5",
           "0.2.2-rc.1"
         ],
-        "centerApi": 1,
-        "dataSchema": 1,
         "dependencies": [],
-        "published": true,
-        "notes": ""
+        "notes": "",
+        "dataSchema": 1,
+        "published": true
       }
     ]
   },
   "modules": [
     {
       "id": "laurel",
-      "saveMode": "instant",
-      "summary": {
-        "zh": "提醒提问、审批与完成事件。",
-        "en": "Alerts for questions, approvals and completion."
-      },
-      "scope": {
-        "zh": "只负责把需要你处理的事件送到前台卡片或系统通知。",
-        "en": "Delivers events through in-app cards or system notifications."
-      },
-      "category": "experience",
-      "order": 50,
-      "keywords": [
-        "通知",
-        "提醒",
-        "notification"
-      ],
       "dir": "laurel",
       "entry": "laurel",
       "clientId": "laurel",
@@ -63,44 +61,40 @@
         "zh": "提醒提问、审批和完成事件。",
         "en": "Get reminders for questions, approvals, and completed work."
       },
+      "summary": {
+        "zh": "提醒提问、审批与完成事件。",
+        "en": "Alerts for questions, approvals and completion."
+      },
+      "scope": {
+        "zh": "只负责把需要你处理的事件送到前台卡片或系统通知。",
+        "en": "Delivers events through in-app cards or system notifications."
+      },
+      "category": "experience",
+      "order": 50,
+      "saveMode": "instant",
       "defaultOn": false,
+      "hidden": false,
+      "retired": false,
       "releases": [
         {
           "version": "0.1.0",
-          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/laurel-0.1.0.lmod",
           "sha256": "de48dc6912ad116e72b7b22a47b144f07c31bf4b6bd2aafc2d213f9f64e42ab2",
           "bytes": 83989,
+          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/laurel-0.1.0.lmod",
+          "centerApi": 1,
           "hostVersions": [
             "0.2.1-rc.5",
             "0.2.2-rc.1"
           ],
-          "centerApi": 1,
-          "dataSchema": 1,
           "dependencies": [],
-          "published": true,
-          "notes": ""
+          "notes": "",
+          "dataSchema": 1,
+          "published": true
         }
       ]
     },
     {
       "id": "memory-core",
-      "saveMode": "apply",
-      "summary": {
-        "zh": "跨会话保存事实、要求与经验。",
-        "en": "Keep facts, requirements and experience across conversations."
-      },
-      "scope": {
-        "zh": "记忆核心负责保存、检索与经验学习；当前对话的压缩由「上下文压缩」处理。",
-        "en": "Stores and retrieves memory and experience. Context compression handles the current conversation."
-      },
-      "category": "continuity",
-      "order": 10,
-      "keywords": [
-        "记忆",
-        "经验",
-        "skill",
-        "memory"
-      ],
       "dir": "laurel-memory",
       "entry": "laurel-memory",
       "clientId": "laurel-memory",
@@ -113,49 +107,45 @@
         "zh": "把记忆与经验学习合成一套：记录要求与项目现状、从修复中积累经验、按需形成 Skill。零推理可用，不接模型也能记录、检索、纠正、搬家。",
         "en": "Memory and experience learning in one store: record requirements and project state, build experience from fixes, form skills on demand. Works with zero inference."
       },
+      "summary": {
+        "zh": "跨会话保存事实、要求与经验。",
+        "en": "Keep facts, requirements and experience across conversations."
+      },
+      "scope": {
+        "zh": "记忆核心负责保存、检索与经验学习；当前对话的压缩由「上下文压缩」处理。",
+        "en": "Stores and retrieves memory and experience. Context compression handles the current conversation."
+      },
+      "category": "continuity",
+      "order": 10,
+      "saveMode": "apply",
       "defaultOn": false,
+      "hidden": false,
+      "retired": false,
       "releases": [
         {
           "version": "0.1.1",
-          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/memory-core-0.1.1.lmod",
           "sha256": "1e17ca1d8e04f3424534c055c24bc1db85a81a915659494b6e63d0960d1534c7",
           "bytes": 391873,
+          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/memory-core-0.1.1.lmod",
+          "centerApi": 1,
           "hostVersions": [
             "0.2.1-rc.5",
             "0.2.2-rc.1"
           ],
-          "centerApi": 1,
-          "dataSchema": 1,
           "dependencies": [
             {
               "id": "laurel-core",
               "version": "0.1.0"
             }
           ],
-          "published": true,
-          "notes": ""
+          "notes": "",
+          "dataSchema": 1,
+          "published": true
         }
       ]
     },
     {
       "id": "context-compress",
-      "saveMode": "read-only",
-      "summary": {
-        "zh": "压缩当前对话，按需回读原文。",
-        "en": "Compact the current conversation and retrieve original content."
-      },
-      "scope": {
-        "zh": "负责当前会话的体积与压缩，不代替记忆核心的长期知识管理。",
-        "en": "Manages conversation size and compaction, separately from long-term memory."
-      },
-      "category": "continuity",
-      "order": 20,
-      "keywords": [
-        "压缩",
-        "上下文",
-        "原文",
-        "context"
-      ],
       "dir": "laurel-context",
       "entry": "laurel-context",
       "clientId": "laurel-context",
@@ -168,50 +158,45 @@
         "zh": "长对话瘦身：大结果外置成稳定引用、按需回读原文、分级摘要。独立启停，记忆核心关掉也照样压缩。",
         "en": "Shrink long conversations: stable refs for large results, on-demand original readback, tiered summaries. Runs independently of the memory core."
       },
+      "summary": {
+        "zh": "压缩当前对话，按需回读原文。",
+        "en": "Compact the current conversation and retrieve original content."
+      },
+      "scope": {
+        "zh": "负责当前会话的体积与压缩，不代替记忆核心的长期知识管理。",
+        "en": "Manages conversation size and compaction, separately from long-term memory."
+      },
+      "category": "continuity",
+      "order": 20,
+      "saveMode": "read-only",
       "defaultOn": false,
+      "hidden": false,
+      "retired": false,
       "releases": [
         {
           "version": "0.1.1",
-          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/context-compress-0.1.1.lmod",
           "sha256": "c2fe6df7d941d79e22d44c3e2e411444ab6526c303c6e1b68238685e2437067e",
           "bytes": 190300,
+          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/context-compress-0.1.1.lmod",
+          "centerApi": 1,
           "hostVersions": [
             "0.2.1-rc.5",
             "0.2.2-rc.1"
           ],
-          "centerApi": 1,
-          "dataSchema": 1,
           "dependencies": [
             {
               "id": "laurel-core",
               "version": "0.1.0"
             }
           ],
-          "published": true,
-          "notes": ""
+          "notes": "",
+          "dataSchema": 1,
+          "published": true
         }
       ]
     },
     {
       "id": "auto-continue",
-      "saveMode": "instant",
-      "summary": {
-        "zh": "中断后自动继续，无人值守也能跑下去。",
-        "en": "Resume interrupted turns automatically so long runs keep going."
-      },
-      "scope": {
-        "zh": "负责「这一轮没跑完就接着跑」与「有推荐项时替你选」。不裁历史、不管压缩、不约束子代理等待。",
-        "en": "Resumes unfinished turns and answers recommended options. Does not compact history or cap subagent waits."
-      },
-      "category": "execution",
-      "order": 10,
-      "keywords": [
-        "自动继续",
-        "续跑",
-        "重试",
-        "auto-continue",
-        "resume"
-      ],
       "dir": "laurel-continue",
       "entry": "laurel-continue",
       "clientId": "laurel-continue",
@@ -224,43 +209,40 @@
         "zh": "会话因超时或网络报错中断后自动续跑，可限定生效时段；提问带推荐项时自动选。与护栏、压缩共存不打架。",
         "en": "Resume a turn interrupted by a timeout or network error, optionally within chosen hours; auto-select a recommended option when asked. Yields to the guard and compaction modules."
       },
+      "summary": {
+        "zh": "中断后自动继续，无人值守也能跑下去。",
+        "en": "Resume interrupted turns automatically so long runs keep going."
+      },
+      "scope": {
+        "zh": "负责「这一轮没跑完就接着跑」与「有推荐项时替你选」。不裁历史、不管压缩、不约束子代理等待。",
+        "en": "Resumes unfinished turns and answers recommended options. Does not compact history or cap subagent waits."
+      },
+      "category": "execution",
+      "order": 10,
+      "saveMode": "instant",
       "defaultOn": false,
+      "hidden": false,
+      "retired": false,
       "releases": [
         {
           "version": "0.1.0",
-          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/auto-continue-0.1.0.lmod",
           "sha256": "369192496dbe5301e6baa96b0d1732b5bc1ce7c8f158e5c1161fde4e7ed39b24",
           "bytes": 110646,
+          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/auto-continue-0.1.0.lmod",
+          "centerApi": 1,
           "hostVersions": [
             "0.2.1-rc.5",
             "0.2.2-rc.1"
           ],
-          "centerApi": 1,
-          "dataSchema": 1,
           "dependencies": [],
-          "published": true,
-          "notes": ""
+          "notes": "",
+          "dataSchema": 1,
+          "published": true
         }
       ]
     },
     {
       "id": "warden",
-      "saveMode": "instant",
-      "summary": {
-        "zh": "约束等待、返工与并发修改。",
-        "en": "Guard waits, repeated rework and concurrent changes."
-      },
-      "scope": {
-        "zh": "护栏负责执行约束、预算提醒和可选的工具输出归档；历史对话压缩在「上下文压缩」中查看。",
-        "en": "Guards execution, budget nudges and optional tool-output archiving. Check Context compression for history compaction."
-      },
-      "category": "execution",
-      "order": 40,
-      "keywords": [
-        "护栏",
-        "等待",
-        "guard"
-      ],
       "dir": "dsh-warden",
       "entry": "dsh-warden",
       "clientId": "dsh-warden",
@@ -273,45 +255,40 @@
         "zh": "减少无效等待、重复返工与上下文堆积。",
         "en": "Subagent wait caps, results to files, rework nudges, context watermark, shared-directory locks."
       },
+      "summary": {
+        "zh": "约束等待、返工与并发修改。",
+        "en": "Guard waits, repeated rework and concurrent changes."
+      },
+      "scope": {
+        "zh": "护栏负责执行约束、预算提醒和可选的工具输出归档；历史对话压缩在「上下文压缩」中查看。",
+        "en": "Guards execution, budget nudges and optional tool-output archiving. Check Context compression for history compaction."
+      },
+      "category": "execution",
+      "order": 40,
+      "saveMode": "instant",
       "defaultOn": false,
+      "hidden": false,
+      "retired": false,
       "releases": [
         {
           "version": "0.3.1",
-          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/warden-0.3.1.lmod",
           "sha256": "b4c92bedd1344a8f855cdf57fefd0cc3b689a0ae8d4874907f8ccbe075447e62",
           "bytes": 309762,
+          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/warden-0.3.1.lmod",
+          "centerApi": 1,
           "hostVersions": [
             "0.2.1-rc.5",
             "0.2.2-rc.1"
           ],
-          "centerApi": 1,
-          "dataSchema": 1,
           "dependencies": [],
-          "published": true,
-          "notes": ""
+          "notes": "",
+          "dataSchema": 1,
+          "published": true
         }
       ]
     },
     {
       "id": "reasoning-scroll",
-      "saveMode": "instant",
-      "summary": {
-        "zh": "把思考过程收成限高滚动窗。",
-        "en": "Turn reasoning output into a capped scroll window."
-      },
-      "scope": {
-        "zh": "只管「思考」这一块的显示方式：限高、淡出、贴底、何时展开收起；不裁剪内容，也不改模型说的话。",
-        "en": "Only changes how the reasoning block is displayed: height cap, fade, auto-follow, expand/collapse. It never trims content."
-      },
-      "category": "experience",
-      "order": 70,
-      "keywords": [
-        "思考",
-        "推理",
-        "滚动",
-        "reasoning",
-        "scroll"
-      ],
       "dir": "laurel-reasoning-scroll",
       "entry": "laurel-reasoning-scroll",
       "clientId": "laurel-reasoning-scroll",
@@ -324,22 +301,35 @@
         "zh": "把「思考」的展开体做成限高滚动窗：渐变淡出、流式贴底、结束收起，可把工具过程也并进来。",
         "en": "Turns the reasoning block into a height-capped scroll window: faded text, auto-follow while streaming, collapses when done. Tool-call output can share the same cap."
       },
+      "summary": {
+        "zh": "把思考过程收成限高滚动窗。",
+        "en": "Turn reasoning output into a capped scroll window."
+      },
+      "scope": {
+        "zh": "只管「思考」这一块的显示方式：限高、淡出、贴底、何时展开收起；不裁剪内容，也不改模型说的话。",
+        "en": "Only changes how the reasoning block is displayed: height cap, fade, auto-follow, expand/collapse. It never trims content."
+      },
+      "category": "experience",
+      "order": 70,
+      "saveMode": "instant",
       "defaultOn": false,
+      "hidden": false,
+      "retired": false,
       "releases": [
         {
           "version": "0.1.1",
-          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/reasoning-scroll-0.1.1.lmod",
           "sha256": "b5bb5da47b3869effd1a135c138a9f2cd58245d1e7448555c3521529762b8f37",
           "bytes": 69309,
+          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/reasoning-scroll-0.1.1.lmod",
+          "centerApi": 1,
           "hostVersions": [
             "0.2.1-rc.5",
             "0.2.2-rc.1"
           ],
-          "centerApi": 1,
-          "dataSchema": 1,
           "dependencies": [],
-          "published": true,
-          "notes": ""
+          "notes": "",
+          "dataSchema": 1,
+          "published": true
         }
       ]
     },
@@ -347,9 +337,8 @@
       "id": "laurel-core",
       "dir": "laurel-core",
       "entry": "laurel-core",
+      "clientId": "laurel-core",
       "settingsId": "laurel-core",
-      "category": "foundation",
-      "hidden": true,
       "title": {
         "zh": "Laurel 公共库",
         "en": "Laurel Core"
@@ -358,21 +347,35 @@
         "zh": "随模块自动安装的共享代码。",
         "en": "Shared code installed with dependent modules."
       },
+      "summary": {
+        "zh": "随模块自动安装的共享代码。",
+        "en": "Shared code installed with dependent modules."
+      },
+      "scope": {
+        "zh": "随模块自动安装的共享代码。",
+        "en": "Shared code installed with dependent modules."
+      },
+      "category": "foundation",
+      "order": 100,
+      "saveMode": "instant",
+      "defaultOn": false,
+      "hidden": true,
+      "retired": false,
       "releases": [
         {
           "version": "0.1.0",
-          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/laurel-core-0.1.0.lmod",
           "sha256": "57e820765c01878cb199c1f4d638749b439cba7c826c5e257ed8e32d81c17de3",
           "bytes": 88760,
+          "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.2/laurel-core-0.1.0.lmod",
+          "centerApi": 1,
           "hostVersions": [
             "0.2.1-rc.5",
             "0.2.2-rc.1"
           ],
-          "centerApi": 1,
-          "dataSchema": 1,
           "dependencies": [],
-          "published": true,
-          "notes": ""
+          "notes": "",
+          "dataSchema": 1,
+          "published": true
         }
       ]
     }
