@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Auto continue",
+    "description": "Resume a turn interrupted by a timeout or network error, optionally within chosen hours; auto-select a recommended option when asked. Yields to the guard and compaction modules."
+  }
+}

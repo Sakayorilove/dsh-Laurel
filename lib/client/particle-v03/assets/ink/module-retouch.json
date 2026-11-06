@@ -1,0 +1,22 @@
+[
+  {
+    "file": "light-module.png",
+    "source": "light-selected.png",
+    "coreEnd": 0.48,
+    "size": [
+      640,
+      80
+    ],
+    "transform": "crop real dense pigment, widen body, source-derived rough fringe; dissolve tail only after dense core"
+  },
+  {
+    "file": "dark-module.png",
+    "source": "dark-selected.png",
+    "coreEnd": 0.48,
+    "size": [
+      640,
+      80
+    ],
+    "transform": "crop real dense pigment, widen body, source-derived rough fringe; dissolve tail only after dense core"
+  }
+]

@@ -1,0 +1,68 @@
+name: 缺陷报告
+description: 哪个模块出问题了？把复现步骤写清楚
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。**请不要粘贴密钥、token、私人路径或真实聊天内容**——
+        需要贴日志时请先把用户名、盘符路径和会话正文抹掉。
+  - type: input
+    id: harness
+    attributes:
+      label: 宿主版本
+      description: DeepSeek Harness 的版本（设置 → 关于，或 `dsh --version`）
+      placeholder: 例如 0.2.0-rc.2
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: 哪个部分
+      options:
+        - laurel-center（装载机 / 功能管理）
+        - laurel（通知）
+        - dsh-claude-parchment（Claude 主题）
+        - dsh-strata（记忆与上下文）
+        - 安装 / 卸载
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 出问题的包版本
+      description: 见包内 package.json 或设置页显示
+      placeholder: 例如 dsh-strata 0.2.0
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望发生什么
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际发生什么
+      description: 有报错就贴原文（记得先抹掉个人信息）
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已经跑过 `node scripts/check.mjs` 并附上结果
+        - label: 我确认内容里没有密钥、私人路径或真实会话正文
+          required: true

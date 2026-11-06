@@ -1,0 +1,23 @@
+packages:
+  - packages/*
+# D78：laurel-memory / laurel-context 对 laurel-core 的依赖从
+#   "file:../laurel-core"  改成  "^0.1.0"
+#
+# 为什么改：file: 会被原样写进发布出去的 tgz。用户只装 laurel-memory 一个包时，
+# npm 会把 file:../laurel-core 解析成"用户机器上 laurel-memory 旁边那个目录"——
+# 不存在。实测：`npm install laurel-memory-0.1.0.tgz` 退出码 0、看起来装上了，
+# 直到 import 才炸 `ERR_MODULE_NOT_FOUND: Cannot find module
+# '.../node_modules/laurel-core/lib/vault.mjs'`。
+# 这正是本包有过的那类缺陷：装的时候安静，用的时候才出错。
+#
+# 为什么 caret 单装也会失败（E404 registry 里还没有 laurel-core），
+# 但那种失败是**立刻且说人话的**："你要的 laurel-core 在 npm 上没有"，
+# 好过"装完了，跑到一半找不到文件"。
+#
+# linkWorkspacePackages：让 pnpm 在本地仍按 workspace 解析 ^0.1.0（走本地目录，
+# 不去 registry 找）。实测不加这项时本地 pnpm install 直接 ERR_PNPM_FETCH_404；
+# 加上后 exit=0、包内 import 正常。已实测 pack 出去的 specifier 仍是 "^0.1.0"。
+linkWorkspacePackages: true
+
+allowBuilds:
+  esbuild: true

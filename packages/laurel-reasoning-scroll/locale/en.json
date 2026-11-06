@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Reasoning scroll",
+    "description": "Turns the reasoning block into a height-capped scroll window: faded text, auto-follow while streaming, collapses when done. Tool-call output can share the same cap."
+  }
+}

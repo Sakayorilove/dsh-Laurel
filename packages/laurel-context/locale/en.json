@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Context compression",
+    "description": "Shrink long conversations: stable refs for large results, on-demand original readback, tiered summaries. Runs independently of the memory core."
+  }
+}

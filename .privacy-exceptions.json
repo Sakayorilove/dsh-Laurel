@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "file": "packages/laurel-memory/lib/redact.mjs",
+      "rule": "url-credentials",
+      "sha256": "ae7c9f95165aff0b836da5283e9c119d1c8d7ad9d169aba95874044b1b03fd55",
+      "reason": "已核对的脱敏算法文档占位示例；例外仅匹配该文件、规则及示例内容。"
+    },
+    {
+      "file": "packages/laurel-memory/lib/redact.mjs",
+      "rule": "url-credentials",
+      "sha256": "9e12e5e2ce715887d56695f54790059c49f40038813840e64074f26fcf779c75",
+      "reason": "已核对的脱敏算法文档占位示例；例外仅匹配该文件、规则及示例内容。"
+    },
+    {
+      "file": "packages/laurel-memory/lib/redact.mjs",
+      "rule": "url-query-secret",
+      "sha256": "1d74919a7fa1f2364012855c0baa9a89ed44ed5353887dd37aac62bceae74c19",
+      "reason": "已核对的脱敏算法文档占位示例；例外仅匹配该文件、规则及示例内容。"
+    },
+    {
+      "file": ".privacy-allow",
+      "rule": "unix-home-path",
+      "sha256": "87e083ec33b235bcd764e834e574ac1c76ae2786eab8b9ea4e99b46e5b0aaa4b",
+      "reason": "既有公开历史中的虚构示例路径；当前已移除该宽泛豁免。"
+    }
+  ]
+}

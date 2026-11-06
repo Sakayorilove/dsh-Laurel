@@ -1,0 +1,55 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # ── 1. 语法：全仓每个 JS/MJS 都要能被解析 ──────────────────────────────
+  syntax:
+    name: 语法检查（全仓 JS/MJS）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: node --check 逐个文件
+        run: |
+          fail=0
+          while IFS= read -r -d '' f; do
+            node --check "$f" || { echo "::error file=$f::syntax error"; fail=1; }
+          done < <(git ls-files -z '*.js' '*.mjs' '*.cjs')
+          exit $fail
+
+  # ── 2. 单元测试：不装依赖，克隆下来就能跑 ──────────────────────────────
+  unit:
+    name: 单元测试（无需宿主）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/*.test.mjs
+
+  # ── 3. 客户端产物必须与源码一致 ────────────────────────────────────────
+  # lib/client.js 是 lib/client/** 的构建产物。手改产物、或改了源码忘了重建，
+  # 都会让「装上的人和仓库里的代码」不是同一份 —— 这一关专门堵它。
+  build-check:
+    name: 客户端产物一致性
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.28.3'
+      - name: 装依赖（跳过 Playwright 浏览器下载）
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: 产物与源码比对
+        run: pnpm run build:client:check

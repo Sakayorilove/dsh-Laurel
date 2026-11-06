@@ -1,0 +1,21 @@
+# 统一行尾：仓库里一律存 LF，各平台检出时按下面例外处理。
+# 本项目同时有 Windows 宿主与 WSL 工作树，不统一会让 diff 全是行尾噪声。
+* text=auto eol=lf
+
+# Windows PowerShell 脚本保留 CRLF，避免直接双击运行时解析异常
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.tgz binary
+*.zip binary
+*.woff binary
+*.woff2 binary
+*.ttf binary

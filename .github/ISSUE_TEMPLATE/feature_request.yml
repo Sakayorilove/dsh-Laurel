@@ -1,0 +1,31 @@
+name: 功能建议
+description: 想要什么能力？先说清使用场景
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: 针对哪个部分
+      options:
+        - laurel-center（装载机 / 功能管理）
+        - laurel（通知）
+        - dsh-claude-parchment（Claude 主题）
+        - dsh-strata（记忆与上下文）
+        - 新模块 / 仓库级建议
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你想解决什么问题
+      description: 描述场景，不用先想实现方案
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你想到的做法（可选）
+  - type: textarea
+    id: alternative
+    attributes:
+      label: 现在你怎么绕过（可选）

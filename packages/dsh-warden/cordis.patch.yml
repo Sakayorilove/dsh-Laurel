@@ -1,0 +1,49 @@
+# dsh-warden —— 单独安装这个包时用的 loader 行。
+#
+# ⚠ 两种装法，用的是**不同**的 patch：
+#   1. 跟着 Laurel 套件装（推荐）：行在 Laurel-Center 根目录的 cordis.patch.yml 里，
+#      name 是纯包名 `dsh-warden`（客户端模块系统要靠它找包，见那份文件的注释）。
+#      本文件**不参与**。
+#   2. 单独装这一个包：宿主读本文件，name 是相对本包的 `./lib/index.js`。
+#
+# 下面这份 config 是**默认值**；设置页写的那份（`$DSH_HOME/warden/settings.json`）
+# 会盖在它上面。也就是说：这里改了值，只在用户从没打开过设置页时才生效 ——
+# 这正是"默认值"该有的语义。
+#
+# 三档预设（温和 / 均衡 / 严格）是**三张完整取值表**，不在这个文件里展开 ——
+# 展开会和 `lib/core/config.js` 的 `PRESET_VALUES` 变成两份真相。
+# 这里只写均衡档的展开值，因为 loader 的 config 是扁平的、不支持引用。
+- insert:
+    - id: warden
+      name: ./lib/index.js
+      config:
+        # 总开关。关掉 = 三条钩子全部卸载。
+        enabled: true
+        # 当前档位。值变了不影响下面各项的生效值（那些值是独立读的），
+        # 只影响设置页显示"你现在在哪一档"。
+        preset: balanced
+
+        # ── 子代理 ──────────────────────────────────────────────
+        waitCapMs: 60000          # 子代理等待上限（毫秒）；0 = 不干预
+        starTopology: true        # 子代理只对主控汇报
+        resultsToFile: true       # 子代理结论写文件，只回路径 + 一行摘要
+        lockGuard: true           # 共享目录锁（只拦写，不拦读）
+        lockTtlMs: 120000         # 锁自动过期；必须有过期，否则进程崩了就是死锁
+
+        # ── 上下文 ──────────────────────────────────────────────
+        waterLevelNudge: true     # 增长式水位提醒（与窗口大小无关）
+        waterLevelStep: 50000     # 每长这么多 token 提醒一次
+        microCompact: true        # 按条数裁剪旧工具结果（纯规则，不调模型）
+        microCompactKeep: 6       # 保留最近多少条
+        reworkNudge: true         # 返工提醒（按"同一个文件"计数）
+        reworkThreshold: 3        # 同一文件改到第几次开始提醒
+        rereadNudge: true         # 重复读提醒
+        rereadThreshold: 3        # 同一文件读到第几次开始提醒
+
+        # ── 诊断 ────────────────────────────────────────────────
+        unknownToolHint: true     # 未知工具时附上当前 agent 的真实工具清单
+        editMissHint: true        # 改文件没匹配上时提示"先重读再改"
+        evidenceLedger: true      # 读数指纹台账（产物 sha256 对不上即作废）
+        pathIgnore: []            # 本插件完全不介入的路径（不是给沙箱放行的开关）
+
+        logLevel: info

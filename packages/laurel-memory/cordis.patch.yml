@@ -1,0 +1,31 @@
+# laurel-memory —— 记忆核心挂进 DSH profile 的那一层。
+#
+# 与装载机的 cordis.patch.yml 配合：装载机插行，这一层给行内 config 默认值。
+# 这里只声明**本模块自己**的默认值；模块开关仍由 profile 用户层（disabled）决定。
+- id: memory-core
+  name: laurel-memory
+  config:
+    # 三档：zero | balanced | full。默认零推理 —— 不接模型也能记录/检索/纠正/搬家。
+    tier: zero
+    # 模型来源：none | local | api。默认 none，与 tier=zero 一致。
+    #   api   = 宿主模型：用宿主 llm 服务列出的供应商与模型，在设置页里选（不用填端点、不用管密钥）。
+    #           2026-10-25 起替代原来的「harness 直连」（自动发现本机网关 + 读
+    #           <DSH_HOME>/openai-gateway/api-key + 从会话投影猜当前模型）—— 那套已作废、实现已删除。
+    #   local = 自建 OpenAI 兼容服务：要显式给 baseUrl。
+    modelSource: none
+    # 自动注入上限（字符/条）由 tier 决定，这里不重复配置，避免两处真相。
+    vaultDir: ""        # 空 = 由 adapter 按 DSH_HOME 解析；显式给出时优先
+    # timeZone: ""     # 空 = 跟随系统时区；填 IANA 名称可固定（如 Asia/Tokyo）
+    # 容量治理（L11 / S10）：先有模块（laurel-core/lib/retention.mjs）、后有调度方
+    # （lib/retention-plane.mjs）。默认 **只 plan 不删** —— 自动删用户数据不该是默认行为。
+    # 要真清理：apply: true。真要跑之前请先看端点的 retentionPlane.lastReport
+    # 里 candidateCount / reclaimableBytes，那份就是 dry-run 的预测值。
+    # 硬约束：journal 永不删、删前打 tgz 并逐文件复验 sha256、给了 rollbackCommand。
+    retention:
+      enabled: true
+      apply: false
+      # 6 小时一次；首次延后 30 秒（scanReferences 是全盘扫，别跟宿主装载抢盘）。
+      intervalMs: 21600000
+      firstDelayMs: 30000
+      policy: {}
+

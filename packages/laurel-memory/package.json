@@ -1,0 +1,58 @@
+{
+  "name": "laurel-memory",
+  "version": "0.1.1",
+  "description": "记忆核心：把 Strata 的记忆与 Forge 的经验学习合并为同一数据权威、检索、更正与生命周期；内部保留记忆/经验两种内容视图。零推理可用。",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "bin": {
+    "laurel-memory": "./lib/cli.mjs"
+  },
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./memory": "./lib/memory/index.mjs",
+    "./gateway": "./lib/gateway.mjs",
+    "./adapter-dsh": "./lib/adapter-dsh.mjs",
+    "./importer": "./lib/importer.mjs",
+    "./experience/lifecycle": "./lib/experience/lifecycle.mjs",
+    "./experience/method": "./lib/experience/method.mjs",
+    "./experience/guards": "./lib/experience/guards.mjs",
+    "./experience/skill": "./lib/experience/skill.mjs",
+    "./package.json": "./package.json",
+    "./providers": "./lib/providers.mjs",
+    "./admin-api": "./lib/admin-api.mjs",
+    "./inject": "./lib/inject.mjs",
+    "./projection": "./lib/projection.mjs",
+    "./retention-plane": "./lib/retention-plane.mjs",
+    "./experience/pipeline": "./lib/experience/pipeline.mjs",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": "^0.2.1-rc.1"
+  },
+  "scripts": {
+    "build:client": "node ../../scripts/build-client.mjs --entry packages/laurel-memory/lib/client/index.mjs --out packages/laurel-memory/lib/client.js --id laurel-memory"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "private": true
+}

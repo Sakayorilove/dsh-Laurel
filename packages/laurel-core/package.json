@@ -1,0 +1,33 @@
+{
+  "name": "laurel-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Laurel 公共库：版本化追加日志、内容寻址 blob、快照、单写入锁、持久预算、打包恢复。宿主无关，不 import DSH/Cordis，不读 DSH_HOME。",
+  "license": "MIT",
+  "exports": {
+    ".": "./lib/index.mjs",
+    "./format": "./lib/format.mjs",
+    "./journal": "./lib/journal.mjs",
+    "./blob": "./lib/blob.mjs",
+    "./vault": "./lib/vault.mjs",
+    "./lock": "./lib/lock.mjs",
+    "./budget": "./lib/budget.mjs",
+    "./archive": "./lib/archive.mjs",
+    "./textindex": "./lib/textindex.mjs",
+    "./gateway": "./lib/gateway.mjs",
+    "./providers": "./lib/providers.mjs",
+    "./context-read": "./lib/context-read.mjs",
+    "./retention": "./lib/retention.mjs",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {},
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ]
+}

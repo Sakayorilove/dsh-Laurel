@@ -1,0 +1,50 @@
+# laurel —— 这个包挂进 DSH profile 的那一层。
+#
+# `name` 用**相对路径**：相对本文件所在目录解析（宿主 app-boot 的 composeEntries
+# 会把它变成 file URL）。所以包被 link 到哪里都能加载，不含任何绝对路径。
+#
+# 下面的 config 是**默认值**：
+#   优先级 = 本文件（默认） < $DSH_HOME/laurel/settings.json（设置页写的那份）
+# 也就是说，设置页里改过的开关会盖掉这里；清掉 settings.json 就回到本文件的默认值。
+- insert:
+    - id: laurel
+      name: ./lib/index.js
+      config:
+        # ── 什么时候响 ──
+        # 提问（agent 用 ask_user_question 停下来等你回答）
+        notifyOnQuestion: true
+        # 计划确认（agent 让你确认一份计划）。
+        # 与提问各有一个开关：旧版两类共用一个，设置页只能画一个跨两行的格子，
+        # 视觉上落在第二行，看着像「需要你回答」漏配了。
+        notifyOnPlanReview: true
+        # 审批请求（工具要权限，停下来等你点）
+        notifyOnApproval: true
+        # 回合结束（干完了）。默认关：长任务会响很多次。
+        notifyOnCompletion: false
+
+        # ── 什么时候不响 ──
+        # true = 只有窗口没焦点 / 被收进托盘时才弹。
+        # 你正看着窗口时 DSH 自己就有提示，不必再响一声。
+        onlyWhenUnfocused: true
+        # 同一个会话的最小间隔（秒），防止一串事件连着响。
+        throttleSeconds: 30
+
+        # ── 长什么样 ──
+        # 提示音总开关。关掉 = 完全静音。
+        sound: true
+        # 自定义提示音。留空 = Windows 系统通知音；其它三种写法：
+        #   1) 文件名   → 相对 $DSH_HOME/laurel/sounds/，例如 ding.wav
+        #   2) 绝对路径 → 例如 'C:/Windows/Media/Windows Notify Calendar.wav'（不用拷过来）
+        #   3) http(s) 链接（受页面 CSP 限制，离线不可用）
+        # 设了自定义音之后系统通知音会被静音，避免两声叠在一起。
+        soundFile: ''
+        # 提问/审批这类挡路的事件是否留在通知中心，直到你处理。
+        sticky: true
+        # 通知标题前缀。留空 = 只用会话标题（拿不到会话标题时用 DSH）。
+        title: ''
+        # 正文最大字符数（超了截断，防止一条通知被塞满）。
+        maxBodyChars: 140
+        # 文案语言：auto（跟浏览器）/ zh / en
+        language: auto
+
+        logLevel: info

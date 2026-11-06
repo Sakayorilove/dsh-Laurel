@@ -1,0 +1,10 @@
+title = "Laurel release scanning"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Reviewed public appearance localStorage key in its owning source and bundle"
+condition = "AND"
+regexTarget = "secret"
+regexes = ['''^laurel\.harness-appearance\.v03$''']
+paths = ['''(?:^|/)lib/(?:client\.js|client/si-flow-runtime\.mjs|client/si-flow/interface-module\.json)$''']

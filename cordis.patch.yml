@@ -1,0 +1,56 @@
+# laurel-center —— 装载机挂进 DSH profile 的那一层。
+#
+# 这个文件是整个装载机的「总闸」。它只插 **1 行**进 loader 树：
+#
+#   1     laurel-center          装载机自己（宿主半边 + 控制中心整页面板）
+#
+# ── 为什么只留一行，而不是每模块一行 ────────────────────────────────────
+# 1.4.x 之前这里静态插九行（装载机自己 + 九个模块各一行）。后果：DSH 原生
+# 「插件」页会给每个声明了 `dsh.bundle.patch` 的包各出一张卡，用户看到的是
+# 十张卡，而不是「一个 Laurel 控制中心」。
+#
+# 现在九个模块改由装载机自己在运行时用 `ctx.plugin()` 挂成子插件（见
+# lib/modules.js）：Cordis 的子 fiber 不产生 Loader entry，而宿主
+# host/plugin-inventory 只遍历 ctx.loader.entries()，所以它们不再出现在
+# 任何插件列表里。
+#
+# 配套改动：九个模块包的 package.json **不再声明 dsh.bundle**，只留
+# dsh.client（少了它前端 bundle 进不了 boot graph）。各包自己的
+# cordis.patch.yml 文件仍保留 —— 那是回滚证据，也是将来单装单个包的路径。
+#
+# ── name 为什么是纯包名 ──────────────────────────────────────────────────
+# DSH 的 client-modules 用 `resolveMeta(loaderName, baseUrl)` 找包：
+#   - 带斜杠但不是 scope 包（`laurel-center/packages/laurel`）→ 既不是合法包名、
+#     也不是 path-like（不以 `.`/`file:`/绝对路径开头）→ **直接返回 null**，
+#     该行不产出 boot graph row，前端永远加载不到。
+#   - 纯包名（`laurel-center`）→ 走 Node 解析，从 profile 目录找
+#     `node_modules/laurel-center`。
+#
+# 所以这一行的 name 必须是纯包名：包在 profile 的 node_modules 里有一个链接，
+# 指向**本包目录**（见 README 的安装步骤）。源码实体只有一份，
+# profile 里只是链接。
+#
+# ── 单独开关怎么落地 ────────────────────────────────────────────────────
+# 模块没有 loader 行，也就没有 `disabled` 可写，宿主原生
+# `pluginManager.setPluginEnabled(entryId)` 对这些模块不再适用。开关改由装载机
+# 自己管：控制中心整页（侧栏 Laurel 行 / 侧栏底部按钮 / 设置页分区）里的开关、
+# 以及「一键全部打开 / 全部关闭」，都写
+# `$DSH_HOME/laurel-center/modules.json`（`{ "laurel": true, ... }`），
+# 再由 lib/modules.js 按它挂载 / 卸载对应的子插件。
+#
+# ── 默认值 ──────────────────────────────────────────────────────────────
+# 默认开关取 lib/registry.js 的 `defaultOn`（唯一真相，不在这里重抄第二份）。
+# 旧版本把默认开关写在模块行的 config 里并另存 state.json；
+# 新版不再需要 —— state.json 只作一次性迁移输入。
+- insert:
+    # ─────────────────────────────────────────────── 装载机自己
+    - id: laurel-center
+      # 纯包名，不是 ./lib/index.js。
+      # 宿主把**相对路径**的行 name 按 patch 文件所在目录锚成 file:// URL；那一行的
+      # 展示元数据（原生插件页的标题、图标）走 readPluginMeta(row.name)，而它要求
+      # 一个**包名**（barePackageName 对 file:// 直接返回 undefined）→ 页面只能显示
+      # 原始路径，于是组件列表第一行长期是一条 file:///… 的乱码文本。
+      # 纯包名走 Node 解析（profile 的 node_modules），元数据才读得到。
+      name: laurel-center
+      config:
+        logLevel: info

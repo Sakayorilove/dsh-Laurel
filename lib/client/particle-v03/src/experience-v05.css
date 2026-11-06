@@ -1,0 +1,65 @@
+/* 0.5 palette comes from the same host transaction as the DSH shell. */
+:root[data-revision="0.5"]{--bg:var(--lx-side,#141313);--panel:var(--lx-plate,#302f2f);--paper:var(--lx-text,#eeecec);--ink:var(--lx-text,#eeecec);--signal:var(--lx-accent,#fffd0e);--muted:var(--lx-muted,#b5b5ae);--line:var(--lx-line,#555650);--line-dark:var(--lx-line,#555650);--surface:var(--lx-surface,#242423);--action-ink:var(--lx-text,#eeecec)}
+:root[data-revision="0.5"] .scene{--bg:var(--lx-side,#141313);--paper:var(--lx-text,#eeecec);--ink:var(--lx-text,#eeecec);--muted:var(--lx-muted,#b5b5ae);--signal:var(--lx-accent,#fffd0e);--line:var(--lx-line,#555650);background:transparent;color:var(--paper)}
+:root[data-revision="0.5"] .scene:after{background:var(--lx-side);border-color:var(--lx-line);opacity:1}
+:root[data-revision="0.5"] .app:before{background-image:none;opacity:0}
+:root[data-revision="0.5"] body{background:var(--bg);color:var(--paper)}
+:root[data-revision="0.5"] .scene-dialog,:root[data-revision="0.5"] .detail-dialog,:root[data-revision="0.5"] .theme-library-dialog{background:var(--lx-surface);color:var(--lx-text);border-color:var(--lx-line)}
+:root[data-revision="0.5"] .scene-dialog .ink-state,:root[data-revision="0.5"] .setting-search-results button{color:var(--lx-text)}
+:root[data-revision="0.5"] .scene-dialog fieldset{border-color:var(--lx-line)}
+:root[data-theme=industrial] .flow-selection{display:none!important}
+:root[data-theme=industrial] .category-nav{border-radius:2px;overflow:hidden!important;border-color:var(--lx-line);padding:4px;gap:4px;background:var(--lx-plate)}
+:root[data-theme=industrial] .category-nav button{border-radius:0;min-height:38px;isolation:isolate;color:var(--lx-text)!important;text-shadow:none!important;transition:color 130ms}
+:root[data-theme=industrial] .category-nav button[aria-selected=true]{color:var(--lx-selectedText)!important}
+:root[data-theme=industrial] .category-nav button[aria-selected=true] span{opacity:.75}
+:root[data-theme=industrial] .category-nav .tab-indicator{visibility:visible!important;background:var(--lx-selected);border-radius:0;box-shadow:inset 0 -3px var(--lx-accent);clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,9px 100%,0 calc(100% - 9px));transition:none}
+:root[data-theme=industrial] .module-row{border-bottom:1px solid var(--lx-line)!important;transition:transform 180ms,color 130ms}
+:root[data-theme=industrial] .module-row.selected{background:var(--lx-selected)!important;color:var(--lx-selectedText)!important;box-shadow:inset 3px 0 var(--lx-accent);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);animation:lx-register 220ms cubic-bezier(.2,.7,.2,1)}
+:root[data-theme=industrial] .module-row.selected .module-copy strong,:root[data-theme=industrial] .module-row.selected .module-copy small,:root[data-theme=industrial] .module-row.selected .module-icon,:root[data-theme=industrial] .module-row.selected .row-state,:root[data-theme=industrial] .module-row.selected .row-favorite,:root[data-theme=industrial] .module-row.selected .row-open{color:var(--lx-selectedText)!important;text-shadow:none!important}
+:root[data-theme=industrial] .module-row.selected .module-icon{border-color:currentColor;opacity:.8}
+:root[data-theme=industrial] .module-row.selected .row-state i{background:currentColor;border-color:currentColor}
+:root[data-theme=industrial] .category-nav button[data-brush-tone],:root[data-theme=industrial] .module-row[data-brush-tone] .module-copy strong{text-shadow:none!important}
+:root[data-theme=si][data-color=dark] .app:before{opacity:.13}
+:root[data-theme=si][data-color=light] .scene-watermark{-webkit-text-stroke-color:#263e3e18}
+:root[data-revision="0.5"] .theme-caption{font-size:10px;color:var(--muted)}
+.experience-shortcut{font:inherit;color:var(--paper);border:1px solid var(--line);padding:8px 12px;border-radius:2px}
+@keyframes lx-register{from{clip-path:polygon(0 0,0 0,0 100%,0 100%)}to{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}}
+
+.reduced-motion .module-row.selected{animation:none!important}.reduced-motion .tab-indicator{transition:none!important}
+
+:root[data-revision="0.5"] .primary-action{background:var(--lx-accent);color:var(--lx-accentText)!important}
+:root[data-revision="0.5"] .brand-icon{color:var(--lx-accent)}
+
+:root[data-theme=industrial] .list-shell{position:relative;isolation:isolate;overflow:hidden}
+:root[data-theme=industrial] .list-columns,:root[data-theme=industrial] .module-list{position:relative;z-index:1}
+:root[data-theme=industrial] .module-row.selected{background:transparent!important;box-shadow:none;clip-path:none;animation:none}
+:root[data-theme=industrial] .module-row:before{background:none!important;opacity:0!important}
+.industrial-row-indicator{position:absolute;pointer-events:none;z-index:0;background:var(--lx-selected);border-left:3px solid var(--lx-accent);clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%);will-change:transform}
+:root:not([data-theme=industrial]) .industrial-row-indicator{display:none}
+/* Switch track, thumb and boundary have separate contrast roles in both modes. */
+:root[data-revision="0.5"] .switch{appearance:none;background:var(--lx-line)!important;border:1px solid var(--lx-muted)!important}
+:root[data-revision="0.5"] .switch:before{background:var(--lx-bg)!important}
+:root[data-revision="0.5"] .switch:checked{background:var(--lx-accent)!important;border-color:var(--lx-accent)!important}
+:root[data-revision="0.5"] .switch:checked:before{background:var(--lx-accentText)!important}
+
+/* 1.8.5: accepted painting-paper palette + the same optional native fibre texture.
+   This sits behind the transparent WebGL canvas; canvas brightness stays intact. */
+:root[data-revision="0.5"] .scene[data-paper-stage]{--bg:var(--scene-paper-bg);--paper:var(--scene-paper-text);--ink:var(--scene-paper-bg);--muted:var(--scene-paper-muted);--signal:var(--scene-paper-accent);--line:var(--scene-paper-line);color:var(--paper)}
+:root[data-revision="0.5"] .scene[data-paper-stage]:after{background:var(--scene-paper-bg);border-color:var(--scene-paper-line)}
+:root[data-revision="0.5"] .scene[data-paper-stage]:before{inset:0 -27px 0 calc(-1 * var(--gutter));background:url('/laurel-center/materials/7bbcfd3f035ac737858cc5e2ab70f67cc07937567397e11311828993d6c9e1d3.png') repeat;background-size:420px 744px;opacity:.62;mix-blend-mode:multiply;z-index:-1;pointer-events:none}
+:root[data-revision="0.5"] .scene[data-paper-stage] .scene-heading .eyebrow{color:var(--muted)}
+:root[data-revision="0.5"] .scene[data-paper-stage] .scene-watermark{-webkit-text-stroke-color:var(--scene-paper-text);opacity:.12}
+:root[data-revision="0.5"] .scene[data-paper-stage] .section-code{color:var(--signal)}
+.paper-range-ends{color:var(--lx-muted);font-size:11px}.range-row #paper-brightness{height:24px;accent-color:var(--lx-accent)}
+@media(max-width:1100px){:root[data-revision="0.5"] .scene[data-paper-stage]:before{right:-16px}}
+@media(max-width:880px){:root[data-revision="0.5"] .scene[data-paper-stage]:before{right:calc(-1 * var(--gutter))}}
+
+/* Foreground follows the active palette; the ink stroke ends before row actions. */
+:root[data-revision="0.5"] .module-row{--muted:var(--lx-muted)}
+:root[data-revision="0.5"] .module-row :is(.row-state,.row-favorite,.row-open){color:var(--lx-muted)!important;text-shadow:none!important}
+:root[data-revision="0.5"] .module-row .row-state{color:var(--lx-text)!important}
+:root[data-theme=industrial] .module-row:not(.selected) :is(.module-copy strong,.module-icon){color:var(--lx-text)!important;text-shadow:none!important}
+:root[data-theme=industrial] .module-row:not(.selected) .module-copy small{color:var(--lx-muted)!important;text-shadow:none!important}
+:root[data-theme=industrial] .module-row.selected :is(.row-state,.row-favorite,.row-open){color:var(--lx-selectedText)!important}
+:root[data-revision="0.5"] :is(.detail-dialog,.scene-dialog,.theme-library-dialog){--ink:var(--lx-text);--paper:var(--lx-surface);--muted:var(--lx-muted);--line-dark:var(--lx-line);--signal:var(--lx-accent);--action-ink:var(--lx-accentText)}
+:root[data-revision="0.5"] .dialog-heading .eyebrow{color:var(--lx-muted)!important}

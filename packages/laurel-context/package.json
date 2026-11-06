@@ -1,0 +1,50 @@
+{
+  "name": "laurel-context",
+  "version": "0.1.1",
+  "description": "独立上下文压缩：大结果外置成稳定引用、按需原文回取、分级摘要、收益触发。可单独启停，记忆核心关闭时仍可压缩。",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./engine": "./lib/engine.mjs",
+    "./summary-protocol": "./lib/summary-protocol.mjs",
+    "./owner": "./lib/owner.mjs",
+    "./package.json": "./package.json",
+    "./compaction-provider": "./lib/compaction-provider.mjs",
+    "./host-compaction": "./lib/host-compaction.mjs",
+    "./model-summarize": "./lib/model-summarize.mjs",
+    "./mechanical-summarize": "./lib/mechanical-summarize.mjs",
+    "./guard": "./lib/guard.mjs",
+    "./compaction": "./lib/compaction-entry.mjs",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": "^0.2.1-rc.1"
+  },
+  "scripts": {
+    "build:client": "node ../../scripts/build-client.mjs --entry packages/laurel-context/lib/client/index.mjs --out packages/laurel-context/lib/client.js --id laurel-context"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "private": true
+}

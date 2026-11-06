@@ -1,0 +1,48 @@
+{
+  "name": "laurel-continue",
+  "version": "0.1.0",
+  "description": "会话自动继续：非人为中断后自动续跑、按可配置时段生效、自动回答带推荐项的用户提问。作为 Laurel 套件的独立模块，可与内耗护栏、上下文压缩共存。",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "auto-continue",
+    "resume",
+    "laurel"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": "^0.2.1-rc.1"
+  },
+  "scripts": {
+    "build:client": "node ../../scripts/build-client.mjs --entry packages/laurel-continue/lib/client/index.mjs --out packages/laurel-continue/lib/client.js --id laurel-continue --strip-comments"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "private": true
+}

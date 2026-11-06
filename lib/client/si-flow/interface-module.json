@@ -1,0 +1,80 @@
+{
+  "id": "laurel.harness-interface",
+  "version": "0.1",
+  "hostPlugin": "laurel-center",
+  "sourceVisualVersion": "0.3",
+  "storageKey": "laurel.harness-appearance.v03",
+  "themes": [
+    {
+      "name": "月白 · 一笔流墨",
+      "theme": "si-flow-v03",
+      "colorMode": "light"
+    },
+    {
+      "name": "玄墨 · 一笔流碧",
+      "theme": "si-flow-v03",
+      "colorMode": "dark"
+    },
+    {
+      "name": "画纸 · 丹青",
+      "theme": "si-paper-v01",
+      "colorMode": "light"
+    },
+    {
+      "name": "玄墨 · 金丝",
+      "theme": "si-paper-v01",
+      "colorMode": "dark"
+    }
+  ],
+  "defaults": {
+    "motion": true,
+    "paused": false,
+    "speed": 1,
+    "canvasMode": "fit",
+    "paperTone": 65,
+    "paperGrain": 62,
+    "fps": 60
+  },
+  "geometry": "native Harness metrics authoritative",
+  "renderer": "rgba-advection-native-fit-r4",
+  "surfaceRevision": "native-stationary-brush-r8",
+  "privacyFooter": {
+    "identity": "hidden",
+    "actions": [
+      "laurel-center",
+      "settings.open"
+    ],
+    "retainedWhenNative": true
+  },
+  "paperControls": {
+    "family": "si-paper-v01",
+    "range": [
+      0,
+      100
+    ],
+    "step": 1,
+    "persistence": "independent Harness appearance key; remembered across theme disable/re-enable",
+    "source": "paper-ledger.json"
+  },
+  "selectionTransition": {
+    "source": "accepted ink preview 0.3 / native-add.js + brush-track.js",
+    "paintMs": 650,
+    "eraseMs": 410,
+    "direction": "left-to-right; erase fully before paint; no translation",
+    "fps": [
+      30,
+      60,
+      90,
+      120
+    ],
+    "speeds": [
+      0.5,
+      1,
+      1.5,
+      2,
+      2.5,
+      3
+    ],
+    "clock": "shared pigment timestamp; includes native ongoing rings"
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "name": "0008bc063a1a917b4f082f5195d6e4ae973b041b0fc4ae94d5ef80e5d1c5d6fd.webp",
+      "mime": "image/webp",
+      "bytes": 52496,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "015cd99000e3752ca54a3e4973080fb77906a4e3cf2f8dbcace0269e95eb5775.png",
+      "mime": "image/png",
+      "bytes": 795,
+      "width": 1037,
+      "height": 13
+    },
+    {
+      "name": "037f0de359b43401c7f15038168f25daa992d6404de4d5307516ca1cdc997752.ply",
+      "mime": "application/octet-stream",
+      "bytes": 89808
+    },
+    {
+      "name": "0823220e7257b7147ecd67a975335b9a582096d7b9369834509aae2e2766c0fc.png",
+      "mime": "image/png",
+      "bytes": 62880,
+      "width": 640,
+      "height": 80
+    },
+    {
+      "name": "0a7b148535b49d85d8d1227101fc1b39ee805411b2379bb38ea1d35931f56237.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 20204
+    },
+    {
+      "name": "0daa8634a8c3b26d6a3e96884f0849652cc669b454115ed17d58c466fc9124db.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 118124
+    },
+    {
+      "name": "1331a2787805ef778edf044bda3f369ab54ac37778c08727ef85c5dc8c919a05.png",
+      "mime": "image/png",
+      "bytes": 2279,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "name": "158844af202f3d6d82bad30685663e0e2cae3869b6d9ff2019797a0950a24aa5.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 1085228
+    },
+    {
+      "name": "16e8f5664174f49839c5b6b5256f0cff688784df153a7584ef32f107b65ac597.png",
+      "mime": "image/png",
+      "bytes": 38033,
+      "width": 360,
+      "height": 94
+    },
+    {
+      "name": "18b8631513a84b7f253bad7ae8829110c5a1abfe42f08355efbe3e8d0744e7ef.png",
+      "mime": "image/png",
+      "bytes": 161825,
+      "width": 1129,
+      "height": 211
+    },
+    {
+      "name": "1f9ff25837c021b479c469b4b2e58a52905332e5ec630f612af9d26f90fb1592.ply",
+      "mime": "application/octet-stream",
+      "bytes": 543048
+    },
+    {
+      "name": "20d4ff0d30b243b8aa903cf47b81118ab44c264214b4ca072bdfcdc40b4bbf10.png",
+      "mime": "image/png",
+      "bytes": 170495,
+      "width": 450,
+      "height": 400
+    },
+    {
+      "name": "2645483eaff4f5ec3541f02045c5d2219130ba050175e5e2aed02476515e38b8.bin",
+      "mime": "image/svg+xml",
+      "bytes": 293
+    },
+    {
+      "name": "2a0cf919869247466e1fb96d45b479d37e9c55daaba44e0efc246ce904be18f5.png",
+      "mime": "image/png",
+      "bytes": 13155,
+      "width": 628,
+      "height": 23
+    },
+    {
+      "name": "33bae59f720d00a2aac9651c26704081b916a68f07113ecb3f1e44c249b358b9.png",
+      "mime": "image/png",
+      "bytes": 9165,
+      "width": 360,
+      "height": 94
+    },
+    {
+      "name": "351537c7e7a0045d404510b18140b6cf6ab6760739ba3e8b29f34c5aaf1e51ed.png",
+      "mime": "image/png",
+      "bytes": 475,
+      "width": 1030,
+      "height": 8
+    },
+    {
+      "name": "39a2b0535f3ab10d15f9c450fd0ea1d325ca9834cd772a3760961951e5b85c90.png",
+      "mime": "image/png",
+      "bytes": 362,
+      "width": 36,
+      "height": 36
+    },
+    {
+      "name": "3bdbdd7f7ab2933d1853715458b6706bafb80a91e5cd37808b9e1ac56d58df3d.png",
+      "mime": "image/png",
+      "bytes": 31707,
+      "width": 776,
+      "height": 1044
+    },
+    {
+      "name": "3c8e7ce1b8d5fded766bfd70b26f5aae036fd57be0dd4f96c32627d625327c30.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 49484
+    },
+    {
+      "name": "3f7186c40eaadb21c736adab1e03fa98c4870753d2ffcaccdc8928bc95ccaf08.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 35564
+    },
+    {
+      "name": "404def0faa3789dd7a391c656787f133c6ed633cbe2f43737197a3d69e4f02b9.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 13484
+    },
+    {
+      "name": "426c3c1f7fd55a58f529855b17e1730ec14540f271de8f23073f9700bf9f68aa.png",
+      "mime": "image/png",
+      "bytes": 12900,
+      "width": 1536,
+      "height": 512
+    },
+    {
+      "name": "43158e58c6c7cbbf6f3f115bf5573d3fe11338da27edfee9f560086b10f790ab.webp",
+      "mime": "image/webp",
+      "bytes": 377618,
+      "width": 1419,
+      "height": 1109
+    },
+    {
+      "name": "4fffa0af8f27df2152bb30819c9f089f4f19083f11a7f377c3d037b34da91af0.png",
+      "mime": "image/png",
+      "bytes": 12201,
+      "width": 342,
+      "height": 76
+    },
+    {
+      "name": "5181d46593a4fe0af9afdc46492601ab47a71c5babf99a30bbf06b287f7b92bc.png",
+      "mime": "image/png",
+      "bytes": 10109,
+      "width": 343,
+      "height": 86
+    },
+    {
+      "name": "532a662d13ee94262b3bb3fe8069486e50d157666d4845e79685a4072258e1ad.webp",
+      "mime": "image/webp",
+      "bytes": 102598,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "67521dc99463e67a763e42753a84b9c88e169eb10219a5d4cb1d720d548cd48d.png",
+      "mime": "image/png",
+      "bytes": 15367,
+      "width": 557,
+      "height": 72
+    },
+    {
+      "name": "6a00f8db40bf41dc928d16bb9f0b1caf932fbea97e07c54fb1d381913d3492d0.png",
+      "mime": "image/png",
+      "bytes": 51491,
+      "width": 384,
+      "height": 512
+    },
+    {
+      "name": "7814ba46c22fbc37d68ebb62dcf926c9c20f97c354f9e8b2209dbe4160a1e24a.webp",
+      "mime": "image/webp",
+      "bytes": 181290,
+      "width": 640,
+      "height": 960
+    },
+    {
+      "name": "784a88b11730756e86f7fd286b1afe42b48c5c5702827b3666ccf72c475ebfc0.png",
+      "mime": "image/png",
+      "bytes": 60078,
+      "width": 567,
+      "height": 105
+    },
+    {
+      "name": "789a9e1fd50f904cdbaeaf87566cea119169caee76f1b0f7dc016ae71f8d9e69.ply",
+      "mime": "application/octet-stream",
+      "bytes": 692184
+    },
+    {
+      "name": "7b6c2d972f26b61ec390ac8c406e0175aae52059663ce534a9555e3c7f0ea6c4.png",
+      "mime": "image/png",
+      "bytes": 39343,
+      "width": 557,
+      "height": 72
+    },
+    {
+      "name": "7bbcfd3f035ac737858cc5e2ab70f67cc07937567397e11311828993d6c9e1d3.png",
+      "mime": "image/png",
+      "bytes": 316879,
+      "width": 576,
+      "height": 1020
+    },
+    {
+      "name": "7fefdb1a9e94a9ac7cd579665ec87986eb1eee026ff440141a646242040d6a76.png",
+      "mime": "image/png",
+      "bytes": 3033,
+      "width": 104,
+      "height": 15
+    },
+    {
+      "name": "82c1fe23d20b8aa5cba0088867153ac6a23f222a69f16a43b0d11ce2564885b0.bin",
+      "mime": "image/svg+xml",
+      "bytes": 73924
+    },
+    {
+      "name": "8409ff40886f2f03c5cc3903e9dc8c746161217789480ecae7d08b0e94df64b8.png",
+      "mime": "image/png",
+      "bytes": 35598,
+      "width": 342,
+      "height": 76
+    },
+    {
+      "name": "88f35e30d96739a098b5ee5c731e10653e377519b6e66075b448dc5a502f0e8f.png",
+      "mime": "image/png",
+      "bytes": 3047,
+      "width": 121,
+      "height": 16
+    },
+    {
+      "name": "8940c6b6fc4123f7ed99b316b4d96a7bc59c2b85ca30a4ee57022e90ea1e1f07.png",
+      "mime": "image/png",
+      "bytes": 765,
+      "width": 104,
+      "height": 15
+    },
+    {
+      "name": "8b86710103d85054e87cc5840e83c956dc9a6c2d913380dd49f449801050bbfe.png",
+      "mime": "image/png",
+      "bytes": 59989,
+      "width": 1129,
+      "height": 211
+    },
+    {
+      "name": "992172a4292f51fc81ba5517307bf8e6e73ff121d624fd3a65d3971fff584029.png",
+      "mime": "image/png",
+      "bytes": 66307,
+      "width": 640,
+      "height": 80
+    },
+    {
+      "name": "9c1c727f93f31253e66bdec0308a3040c1c9718b903e3e515da544861bb87a7f.png",
+      "mime": "image/png",
+      "bytes": 167140,
+      "width": 450,
+      "height": 400
+    },
+    {
+      "name": "9ca83f8293d235bb42dcf60ee025f0a64ad4e6072eee3952c9e884271927edd4.png",
+      "mime": "image/png",
+      "bytes": 14181,
+      "width": 540,
+      "height": 56
+    },
+    {
+      "name": "a1a7c826b280eb6a46446e195d679b12c110949ffa8041121ab42c60275d0eca.png",
+      "mime": "image/png",
+      "bytes": 26799,
+      "width": 567,
+      "height": 105
+    },
+    {
+      "name": "a32f965fe38bef175df25e2b29bcfe7a28111688980dd8d1fe6cd09e8c195db0.png",
+      "mime": "image/png",
+      "bytes": 36293,
+      "width": 343,
+      "height": 86
+    },
+    {
+      "name": "a374bed74fc46575082dc3f72308f1c3af7e5df1f0b766408c080ed346f1ad80.png",
+      "mime": "image/png",
+      "bytes": 15937,
+      "width": 343,
+      "height": 80
+    },
+    {
+      "name": "ade7124306002d04a4ed36034b7268bb99a27ddac5459dd18c312cdd2f424eb7.png",
+      "mime": "image/png",
+      "bytes": 803,
+      "width": 121,
+      "height": 16
+    },
+    {
+      "name": "b317502e86d3b42be5bf4210b29b2fc1558d3a216da047d75aac570d935bfe65.webp",
+      "mime": "image/webp",
+      "bytes": 106722,
+      "width": 1535,
+      "height": 864
+    },
+    {
+      "name": "b69056f5f405d5b3ca7365fe7706515c5605ac167d9043b9ecf9134dd368c6bd.png",
+      "mime": "image/png",
+      "bytes": 6958,
+      "width": 700,
+      "height": 36
+    },
+    {
+      "name": "b77fa37c63a85b4a740b68af860623a61b5ce775fd192012f8146582377daea3.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 1484
+    },
+    {
+      "name": "bc595f498ba74e110f03005b4f670e59890c6f656fd19e6fd40b2cbfa385b122.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 5804
+    },
+    {
+      "name": "c213b34989952ec8daaae312a932ca819a6e77c2acd319222ea6c17b75b0a63c.png",
+      "mime": "image/png",
+      "bytes": 36687,
+      "width": 640,
+      "height": 80
+    },
+    {
+      "name": "c2d8ab5ef3a46b36aa81e777f32487ce5ad2cab80c9883cf3bfcf6f794e42666.png",
+      "mime": "image/png",
+      "bytes": 5863,
+      "width": 1030,
+      "height": 8
+    },
+    {
+      "name": "c7b9a034a86946e2cf9081804b5bd40f47f76a68bcfa6d936ea308ca57bca8b9.png",
+      "mime": "image/png",
+      "bytes": 30814,
+      "width": 700,
+      "height": 36
+    },
+    {
+      "name": "cccb91116e536357f1ead8fef06fbf901f3a75aa5a295bc4087b9997ceaa87de.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 2924
+    },
+    {
+      "name": "d0033dfb1f7cbfc5cbe08f6b5c5dde57ffef771d14842c689598620cdf2017b3.png",
+      "mime": "image/png",
+      "bytes": 12826,
+      "width": 1536,
+      "height": 512
+    },
+    {
+      "name": "d1322ffcb1f2ac7f81dcb858682e7db8bf798040a8d746773680dae7fe738350.ply",
+      "mime": "application/octet-stream",
+      "bytes": 566292
+    },
+    {
+      "name": "d1d40e65e811dc9e71843ab4194ef72fa59a9758407dca510412851cf046e868.png",
+      "mime": "image/png",
+      "bytes": 35593,
+      "width": 343,
+      "height": 80
+    },
+    {
+      "name": "d2842aa2703723c4ef0f3a359c7655e87a9ba6d94636f5a92c58f50d27f0405b.png",
+      "mime": "image/png",
+      "bytes": 72156,
+      "width": 624,
+      "height": 120
+    },
+    {
+      "name": "ddfbd59850c53a4e2c2b5063ef9d11db93f4fd77671364b24711ffb5f060c25e.png",
+      "mime": "image/png",
+      "bytes": 59784,
+      "width": 1121,
+      "height": 185
+    },
+    {
+      "name": "e857d519d018e862c78334f823fe4b607d250b15d5fd4600bca9dbd915a3ccd3.png",
+      "mime": "image/png",
+      "bytes": 106482,
+      "width": 1121,
+      "height": 185
+    },
+    {
+      "name": "e8719b1d99f268830e7fa0e1898ab8938b3ae71174b4675ae1cb8a88767d32f9.png",
+      "mime": "image/png",
+      "bytes": 37519,
+      "width": 640,
+      "height": 80
+    },
+    {
+      "name": "e9ac6d570d1d78dbc974c26aa6b87922f4af8be4fee84957e9184e91606a214b.png",
+      "mime": "image/png",
+      "bytes": 2246,
+      "width": 628,
+      "height": 23
+    },
+    {
+      "name": "ea7f577855c4f0487e8771c663726b51842bb6da6c7b85da4af07d1129c69335.png",
+      "mime": "image/png",
+      "bytes": 8415,
+      "width": 1037,
+      "height": 13
+    },
+    {
+      "name": "ee3772d2fb163489ae0706c32197b2842bcd96536b29f56f60760a497e8b4091.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 8684
+    },
+    {
+      "name": "eea23fd74b618d490eaff2f1a9f3f5f9b4052e4b6992a50f5ef56955d086be24.webp",
+      "mime": "image/webp",
+      "bytes": 74654,
+      "width": 640,
+      "height": 640
+    },
+    {
+      "name": "f4e1687c2fd3a6c27e30e89048f4aa1c1ec5967a6648313b5e921f478f15e00a.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 35084
+    },
+    {
+      "name": "f4f99c74a0b9d7525e4206bf65a48e8c9d69ca17ed66d59b75e198d1fd9ec7b9.woff2",
+      "mime": "font/woff2",
+      "bytes": 83896
+    },
+    {
+      "name": "f715a813f21a0af4f43baa6908f4397655d4fde0bb8579188b3de21a8e458377.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 5804
+    },
+    {
+      "name": "fba1bef21a47cb2a04effe61f9faca1fb8adc44576111679a0744d8aaded5804.mp3",
+      "mime": "audio/mpeg",
+      "bytes": 82604
+    }
+  ],
+  "aliases": {
+    "art/accepted-43158e58c6c7cbbf.webp": "/laurel-center/materials/43158e58c6c7cbbf6f3f115bf5573d3fe11338da27edfee9f560086b10f790ab.webp",
+    "art/accepted-b317502e86d3b42b.webp": "/laurel-center/materials/b317502e86d3b42be5bf4210b29b2fc1558d3a216da047d75aac570d935bfe65.webp",
+    "art/audio/aic-area.mp3": "/laurel-center/materials/0daa8634a8c3b26d6a3e96884f0849652cc669b454115ed17d58c466fc9124db.mp3",
+    "art/audio/common-click.mp3": "/laurel-center/materials/cccb91116e536357f1ead8fef06fbf901f3a75aa5a295bc4087b9997ceaa87de.mp3",
+    "art/audio/confirm.mp3": "/laurel-center/materials/0a7b148535b49d85d8d1227101fc1b39ee805411b2379bb38ea1d35931f56237.mp3",
+    "art/audio/dropdown-close.mp3": "/laurel-center/materials/404def0faa3789dd7a391c656787f133c6ed633cbe2f43737197a3d69e4f02b9.mp3",
+    "art/audio/dropdown-open.mp3": "/laurel-center/materials/ee3772d2fb163489ae0706c32197b2842bcd96536b29f56f60760a497e8b4091.mp3",
+    "art/audio/page-close.mp3": "/laurel-center/materials/3f7186c40eaadb21c736adab1e03fa98c4870753d2ffcaccdc8928bc95ccaf08.mp3",
+    "art/audio/page-open.mp3": "/laurel-center/materials/f4e1687c2fd3a6c27e30e89048f4aa1c1ec5967a6648313b5e921f478f15e00a.mp3",
+    "art/audio/recruitment-bgm.mp3": "/laurel-center/materials/158844af202f3d6d82bad30685663e0e2cae3869b6d9ff2019797a0950a24aa5.mp3",
+    "art/audio/region-select.mp3": "/laurel-center/materials/fba1bef21a47cb2a04effe61f9faca1fb8adc44576111679a0744d8aaded5804.mp3",
+    "art/audio/reward-open.mp3": "/laurel-center/materials/3c8e7ce1b8d5fded766bfd70b26f5aae036fd57be0dd4f96c32627d625327c30.mp3",
+    "art/audio/slider.mp3": "/laurel-center/materials/b77fa37c63a85b4a740b68af860623a61b5ce775fd192012f8146582377daea3.mp3",
+    "art/audio/switch-off.mp3": "/laurel-center/materials/bc595f498ba74e110f03005b4f670e59890c6f656fd19e6fd40b2cbfa385b122.mp3",
+    "art/audio/switch-on.mp3": "/laurel-center/materials/f715a813f21a0af4f43baa6908f4397655d4fde0bb8579188b3de21a8e458377.mp3",
+    "art/ef-footer-base.webp": "/laurel-center/materials/0008bc063a1a917b4f082f5195d6e4ae973b041b0fc4ae94d5ef80e5d1c5d6fd.webp",
+    "art/ef-panel-tex.webp": "/laurel-center/materials/0008bc063a1a917b4f082f5195d6e4ae973b041b0fc4ae94d5ef80e5d1c5d6fd.webp",
+    "art/ef-scene-base.webp": "/laurel-center/materials/0008bc063a1a917b4f082f5195d6e4ae973b041b0fc4ae94d5ef80e5d1c5d6fd.webp",
+    "art/ef-topbar-base.webp": "/laurel-center/materials/0008bc063a1a917b4f082f5195d6e4ae973b041b0fc4ae94d5ef80e5d1c5d6fd.webp",
+    "art/si-banner-v3.webp": "/laurel-center/materials/43158e58c6c7cbbf6f3f115bf5573d3fe11338da27edfee9f560086b10f790ab.webp",
+    "art/wuling-landscape-v2.webp": "/laurel-center/materials/b317502e86d3b42be5bf4210b29b2fc1558d3a216da047d75aac570d935bfe65.webp",
+    "art/wuling-si-v1.webp": "/laurel-center/materials/eea23fd74b618d490eaff2f1a9f3f5f9b4052e4b6992a50f5ef56955d086be24.webp",
+    "art/wuling-si-v2.webp": "/laurel-center/materials/7814ba46c22fbc37d68ebb62dcf926c9c20f97c354f9e8b2209dbe4160a1e24a.webp",
+    "particle/T_bluenoise_32.png": "/laurel-center/materials/1331a2787805ef778edf044bda3f369ab54ac37778c08727ef85c5dc8c919a05.png",
+    "particle/alloy-paper.webp": "/laurel-center/materials/532a662d13ee94262b3bb3fe8069486e50d157666d4845e79685a4072258e1ad.webp",
+    "particle/anchor.0e6c6a.bin": "/laurel-center/materials/037f0de359b43401c7f15038168f25daa992d6404de4d5307516ca1cdc997752.ply",
+    "particle/bg_common_grid_1.png": "/laurel-center/materials/39a2b0535f3ab10d15f9c450fd0ea1d325ca9834cd772a3760961951e5b85c90.png",
+    "particle/bg_fac_deco_4.png": "/laurel-center/materials/d2842aa2703723c4ef0f3a359c7655e87a9ba6d94636f5a92c58f50d27f0405b.png",
+    "particle/bg_fachubdata_dot.png": "/laurel-center/materials/3bdbdd7f7ab2933d1853715458b6706bafb80a91e5cd37808b9e1ac56d58df3d.png",
+    "particle/bg_factechtree_contour2.png": "/laurel-center/materials/9ca83f8293d235bb42dcf60ee025f0a64ad4e6072eee3952c9e884271927edd4.png",
+    "particle/factory.bd9a36.bin": "/laurel-center/materials/1f9ff25837c021b479c469b4b2e58a52905332e5ec630f612af9d26f90fb1592.ply",
+    "particle/graphite.webp": "/laurel-center/materials/0008bc063a1a917b4f082f5195d6e4ae973b041b0fc4ae94d5ef80e5d1c5d6fd.webp",
+    "particle/ink/dark-module-flow.png": "/laurel-center/materials/e8719b1d99f268830e7fa0e1898ab8938b3ae71174b4675ae1cb8a88767d32f9.png",
+    "particle/ink/dark-module.png": "/laurel-center/materials/0823220e7257b7147ecd67a975335b9a582096d7b9369834509aae2e2766c0fc.png",
+    "particle/ink/dark-selected-flow.png": "/laurel-center/materials/33bae59f720d00a2aac9651c26704081b916a68f07113ecb3f1e44c249b358b9.png",
+    "particle/ink/dark-selected.png": "/laurel-center/materials/16e8f5664174f49839c5b6b5256f0cff688784df153a7584ef32f107b65ac597.png",
+    "particle/ink/light-module-flow.png": "/laurel-center/materials/c213b34989952ec8daaae312a932ca819a6e77c2acd319222ea6c17b75b0a63c.png",
+    "particle/ink/light-module.png": "/laurel-center/materials/992172a4292f51fc81ba5517307bf8e6e73ff121d624fd3a65d3971fff584029.png",
+    "particle/ink/light-selected-flow.png": "/laurel-center/materials/5181d46593a4fe0af9afdc46492601ab47a71c5babf99a30bbf06b287f7b92bc.png",
+    "particle/ink/light-selected.png": "/laurel-center/materials/a32f965fe38bef175df25e2b29bcfe7a28111688980dd8d1fe6cd09e8c195db0.png",
+    "particle/pile.251dc1.bin": "/laurel-center/materials/d1322ffcb1f2ac7f81dcb858682e7db8bf798040a8d746773680dae7fe738350.ply",
+    "particle/si-ink-grain.png": "/laurel-center/materials/6a00f8db40bf41dc928d16bb9f0b1caf932fbea97e07c54fb1d381913d3492d0.png",
+    "particle/si-ink-matte-left.png": "/laurel-center/materials/d0033dfb1f7cbfc5cbe08f6b5c5dde57ffef771d14842c689598620cdf2017b3.png",
+    "particle/si-ink-matte-right.png": "/laurel-center/materials/426c3c1f7fd55a58f529855b17e1730ec14540f271de8f23073f9700bf9f68aa.png",
+    "particle/spaceship.752e25.bin": "/laurel-center/materials/789a9e1fd50f904cdbaeaf87566cea119169caee76f1b0f7dc016ae71f8d9e69.ply",
+    "native/dark-composer-flow.png": "/laurel-center/materials/8b86710103d85054e87cc5840e83c956dc9a6c2d913380dd49f449801050bbfe.png",
+    "native/dark-composer.png": "/laurel-center/materials/18b8631513a84b7f253bad7ae8829110c5a1abfe42f08355efbe3e8d0744e7ef.png",
+    "native/dark-header-flow.png": "/laurel-center/materials/351537c7e7a0045d404510b18140b6cf6ab6760739ba3e8b29f34c5aaf1e51ed.png",
+    "native/dark-header.png": "/laurel-center/materials/c2d8ab5ef3a46b36aa81e777f32487ce5ad2cab80c9883cf3bfcf6f794e42666.png",
+    "native/dark-message-flow.png": "/laurel-center/materials/a1a7c826b280eb6a46446e195d679b12c110949ffa8041121ab42c60275d0eca.png",
+    "native/dark-message.png": "/laurel-center/materials/784a88b11730756e86f7fd286b1afe42b48c5c5702827b3666ccf72c475ebfc0.png",
+    "native/dark-new-chat-flow.png": "/laurel-center/materials/a374bed74fc46575082dc3f72308f1c3af7e5df1f0b766408c080ed346f1ad80.png",
+    "native/dark-new-chat.png": "/laurel-center/materials/d1d40e65e811dc9e71843ab4194ef72fa59a9758407dca510412851cf046e868.png",
+    "native/dark-paper.png": "/laurel-center/materials/9c1c727f93f31253e66bdec0308a3040c1c9718b903e3e515da544861bb87a7f.png",
+    "native/dark-progress-flow.png": "/laurel-center/materials/b69056f5f405d5b3ca7365fe7706515c5605ac167d9043b9ecf9134dd368c6bd.png",
+    "native/dark-progress.png": "/laurel-center/materials/c7b9a034a86946e2cf9081804b5bd40f47f76a68bcfa6d936ea308ca57bca8b9.png",
+    "native/dark-selected-flow.png": "/laurel-center/materials/33bae59f720d00a2aac9651c26704081b916a68f07113ecb3f1e44c249b358b9.png",
+    "native/dark-selected.png": "/laurel-center/materials/16e8f5664174f49839c5b6b5256f0cff688784df153a7584ef32f107b65ac597.png",
+    "native/dark-tab-flow.png": "/laurel-center/materials/8940c6b6fc4123f7ed99b316b4d96a7bc59c2b85ca30a4ee57022e90ea1e1f07.png",
+    "native/dark-tab.png": "/laurel-center/materials/7fefdb1a9e94a9ac7cd579665ec87986eb1eee026ff440141a646242040d6a76.png",
+    "native/light-composer-flow.png": "/laurel-center/materials/ddfbd59850c53a4e2c2b5063ef9d11db93f4fd77671364b24711ffb5f060c25e.png",
+    "native/light-composer.png": "/laurel-center/materials/e857d519d018e862c78334f823fe4b607d250b15d5fd4600bca9dbd915a3ccd3.png",
+    "native/light-header-flow.png": "/laurel-center/materials/015cd99000e3752ca54a3e4973080fb77906a4e3cf2f8dbcace0269e95eb5775.png",
+    "native/light-header.png": "/laurel-center/materials/ea7f577855c4f0487e8771c663726b51842bb6da6c7b85da4af07d1129c69335.png",
+    "native/light-message-flow.png": "/laurel-center/materials/67521dc99463e67a763e42753a84b9c88e169eb10219a5d4cb1d720d548cd48d.png",
+    "native/light-message.png": "/laurel-center/materials/7b6c2d972f26b61ec390ac8c406e0175aae52059663ce534a9555e3c7f0ea6c4.png",
+    "native/light-new-chat-flow.png": "/laurel-center/materials/4fffa0af8f27df2152bb30819c9f089f4f19083f11a7f377c3d037b34da91af0.png",
+    "native/light-new-chat.png": "/laurel-center/materials/8409ff40886f2f03c5cc3903e9dc8c746161217789480ecae7d08b0e94df64b8.png",
+    "native/light-paper.png": "/laurel-center/materials/20d4ff0d30b243b8aa903cf47b81118ab44c264214b4ca072bdfcdc40b4bbf10.png",
+    "native/light-progress-flow.png": "/laurel-center/materials/e9ac6d570d1d78dbc974c26aa6b87922f4af8be4fee84957e9184e91606a214b.png",
+    "native/light-progress.png": "/laurel-center/materials/2a0cf919869247466e1fb96d45b479d37e9c55daaba44e0efc246ce904be18f5.png",
+    "native/light-selected-flow.png": "/laurel-center/materials/5181d46593a4fe0af9afdc46492601ab47a71c5babf99a30bbf06b287f7b92bc.png",
+    "native/light-selected.png": "/laurel-center/materials/a32f965fe38bef175df25e2b29bcfe7a28111688980dd8d1fe6cd09e8c195db0.png",
+    "native/light-tab-flow.png": "/laurel-center/materials/ade7124306002d04a4ed36034b7268bb99a27ddac5459dd18c312cdd2f424eb7.png",
+    "native/light-tab.png": "/laurel-center/materials/88f35e30d96739a098b5ee5c731e10653e377519b6e66075b448dc5a502f0e8f.png",
+    "native/paper-fibres.png": "/laurel-center/materials/7bbcfd3f035ac737858cc5e2ab70f67cc07937567397e11311828993d6c9e1d3.png",
+    "native/ui-sc.woff2": "/laurel-center/materials/f4f99c74a0b9d7525e4206bf65a48e8c9d69ca17ed66d59b75e198d1fd9ec7b9.woff2",
+    "art/saira-v5.3.0.woff2": "/laurel-center/art/saira-v5.3.0.woff2",
+    "particle/saira.woff2": "/laurel-center/art/saira-v5.3.0.woff2"
+  },
+  "models": {
+    "anchor": "/laurel-center/materials/037f0de359b43401c7f15038168f25daa992d6404de4d5307516ca1cdc997752.ply",
+    "spaceship": "/laurel-center/materials/789a9e1fd50f904cdbaeaf87566cea119169caee76f1b0f7dc016ae71f8d9e69.ply",
+    "pile": "/laurel-center/materials/d1322ffcb1f2ac7f81dcb858682e7db8bf798040a8d746773680dae7fe738350.ply",
+    "factory": "/laurel-center/materials/1f9ff25837c021b479c469b4b2e58a52905332e5ec630f612af9d26f90fb1592.ply"
+  }
+}

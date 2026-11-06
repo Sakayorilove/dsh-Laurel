@@ -1,0 +1,33 @@
+node_modules
+.pnpm-store/
+
+# 构建/打包产物
+*.tgz
+release/
+release.bak-*/
+release.manifest.json
+*.bak-*/
+
+# 本地私有，不入库
+.env
+.env.*
+!.env.example
+.local/
+.verification/
+evidence/
+private-assets/
+private-materials/
+*.private.*
+
+# 隐私扫描器的本机规则与基线（含本机身份，绝不提交）
+.privacy-guard.rules.json
+.privacy-guard-baseline.json
+
+# Machine-specific agent overlays and private outputs
+AGENTS.local.md
+CLAUDE.local.md
+.local-hooks/
+artifacts/
+test-results/
+playwright-report/
+*.log

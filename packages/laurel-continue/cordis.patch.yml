@@ -1,0 +1,79 @@
+# laurel-continue —— 自动继续模块挂进 profile 的那一层。
+#
+# 与「上下文压缩」「内耗护栏」可以同时开启：本模块在运行时会读它们的
+# 治理声明与回合结束原因，遇到它们已经处理的情况会主动让位（见 README 的共存一节）。
+#
+# 默认 disabled: true —— 出厂关闭，由 Laurel 控制中心打开。
+# 刻意在 patch 里写 disabled 而不是删行：行的「存在」是恒定的，删了这行
+# 客户端 bundle 就再也进不了 boot graph，控制中心里那个开关也就永远点不亮。
+- id: auto-continue
+  name: laurel-continue
+  disabled: false
+  config:
+    # 总开关。关掉后不监听回合事件、不发任何消息。
+    enabled: true
+
+    # ── 什么时候续跑 ──
+    # 中断后等多久再发「继续」（毫秒）。给宿主自己恢复留出时间。
+    graceMs: 10000
+    # 同一会话两次自动继续的最小间隔（毫秒），避免对故障上游狂轰滥炸。
+    cooldownMs: 20000
+    # 连续失败多少次就停。到上限后发一条通知并放弃该会话。
+    maxConsecutive: 3
+
+    # ── 哪些结束原因才续跑 ──
+    # turn/end 的 7 种 kind 里，只有 error / max-tokens 会被续跑；
+    # aborted / blocked / interrupted / forked / completed 都不会。
+    resumedKinds:
+      - error
+      - max-tokens
+    # 错误分类：临时性错误（5xx / 429 / 超时 / 网络）续跑，永久性（401/403/余额/模型不存在/上下文超限）跳过并通知。
+    classify: true
+
+    # ── 自主循环 ──
+    # 回合正常结束后也继续（无人值守循环）。默认关闭 —— 打开等于按轮计费。
+    loopAfterCompleted: false
+    # 自主循环的独立额度闸门：最多连开多少轮、总时长上限（毫秒）、单次会话最多花多少轮。
+    # 这道闸门上游没有，是本模块独有的。到点即停并通知。
+    loopMaxRounds: 20
+    loopMaxDurationMs: 3600000
+    loopBudgetNotice: true
+
+    # ── 生效时段 ──
+    # always（全天）| day（日间）| night（夜间）| custom（自定义）| until（未来 N 小时）
+    scheduleMode: always
+    dayStart: "08:00"
+    dayEnd: "22:00"
+    customStart: "09:00"
+    customEnd: "18:00"
+    # until 模式的绝对窗口（epoch 毫秒）；0 表示未设置。
+    activeFrom: 0
+    activeUntil: 0
+
+    # ── 自动应答 ──
+    # 用户提问带「（推荐）」标记时自动选中它；无推荐项时让 AI 自行决定。
+    # plan-review（计划审批）永不自动答 —— 那是用户的决定。
+    autoAnswer: true
+    # 自动应答命中时是否抑制 Laurel 通知模块的「有提问」提醒（避免答了还提醒）。
+    suppressNotifyOnAutoAnswer: true
+
+    # ── 共存与让位 ──
+    # 上下文压缩正在同一轮里重试（agent/request-error 返回 retry）时，只通知不续跑。
+    yieldToCompaction: true
+    # 识别「主动等待被截断」（内耗护栏的 waitCap 返回 {timedOut:true}），
+    # 这类 completed 在 waitGraceMs 内不视为可续跑信号。
+    yieldToWaitCap: true
+    waitGraceMs: 45000
+
+    # ── 消息内容 ──
+    # 中断后发送的文本。支持 {code} {message} {status} {tool} {turn} 占位符。
+    continueText: ""
+    # 上一步工具可能未完成时附加的护栏提示，避免模型重放副作用。
+    guardTools: true
+    guardPendingText: ""
+    guardDoneText: ""
+
+    # ── 其它 ──
+    notify: true
+    locale: auto
+    logLevel: info

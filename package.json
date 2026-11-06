@@ -1,0 +1,82 @@
+{
+  "name": "laurel-center",
+  "version": "1.9.2",
+  "private": true,
+  "description": "Laurel 控制中心：按需安装模块、独立更新、保留配置与数据。",
+  "license": "MIT",
+  "author": "Clelia",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakayorilove/dsh-Laurel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sakayorilove/dsh-Laurel/issues"
+  },
+  "homepage": "https://github.com/Sakayorilove/dsh-Laurel#readme",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "icon": "./icon.svg",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "THIRD-PARTY.md",
+    "release-catalog.json"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "laurel",
+    "launcher",
+    "bundle"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.5 <0.3.0"
+  },
+  "scripts": {
+    "build:client": "node scripts/build-all-client.mjs",
+    "build:client:check": "node scripts/build-all-client.mjs --check",
+    "build:client:single": "node scripts/build-client.mjs",
+    "build:particle": "node scripts/particle-v03/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/qa-v05.mjs",
+    "privacy:setup": "node .github/privacy-guard/privacy-guard.mjs install-hooks --repo .",
+    "privacy:test": "node --test tests/privacy-guard.test.mjs",
+    "privacy:scan": "node .github/privacy-guard/privacy-guard.mjs scan --strict --no-baseline --fail-on medium",
+    "privacy:release": "python3 scripts/release-check.py",
+    "build:release": "node scripts/build-module-release.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  },
+  "dependencies": {},
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "esbuild": "0.25.11",
+    "playwright": "1.56.1",
+    "three": "0.180.0"
+  },
+  "packageManager": "pnpm@11.28.3"
+}

@@ -1,0 +1,35 @@
+# laurel-reasoning-scroll —— 思考滚动窗挂进 profile 的那一层。
+#
+# ⚠ 两种装法，用的是**不同**的 patch：
+#   1. 跟着 Laurel 套件装（推荐）：行在 Laurel-Center 根目录的 cordis.patch.yml 里，
+#      id 是 reasoning-scroll、name 是纯包名 laurel-reasoning-scroll（客户端模块
+#      系统要靠纯包名找包）。本文件**不参与**。
+#   2. 单独装这一个包：宿主读本文件。只想体验这一个模块时用这条路。
+#
+# 这里写的是**出厂默认值**；每个值的理由在 lib/core/config.js 的 FIELDS 注释里
+# 与 README 的表里，不在这里重复 —— 两份注释必然漂。
+#
+# 默认 disabled: true —— 出厂关闭，由 Laurel 控制中心打开。
+# 刻意在 patch 里写 disabled 而不是删行：行的「存在」是恒定的，删了这行
+# 客户端 bundle 就再也进不了 boot graph，控制中心里那个开关也就永远点不亮。
+- id: reasoning-scroll
+  name: laurel-reasoning-scroll
+  disabled: true
+  config:
+    # 总开关。关掉后一个字节都不改宿主界面（样式、DOM 标记、监听全部不挂）。
+    enabled: true
+    # 滚动窗高度上限（px），区间 80–1200。宿主原生思考体没有上限，这里是唯一的量化项。
+    maxHeight: 240
+    # 流式输出时自动贴底；用户手动上翻后不再抢位置，直到他自己回到底部。
+    autoFollow: true
+    # 开始思考时自动展开这一段。
+    expandOnStream: true
+    # 思考结束（正文开始）时自动收起。
+    collapseOnDone: true
+    # 自上而下淡出的渐变文字（用遮罩实现，不用 background-clip:text，原因见 README）。
+    gradientText: true
+    # 上翻之后右下角那颗「跳到最新」。
+    showJumpButton: true
+    # 把这一轮的工具记录也收进同一个限高窗。出厂 false：打开它会改变工具过程
+    # 窗口的默认观感，属于「有人要」才开，不烤进出厂值。
+    includeToolCalls: false

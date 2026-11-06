@@ -1,0 +1,46 @@
+{
+  "name": "laurel",
+  "version": "0.1.0",
+  "description": "给 DSH 补上系统通知：agent 有问题要问你、要你批准、或者干完了，弹一条 Windows 通知并响一声 —— 不看窗口也不会错过。",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification",
+    "toast"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": "^0.2.1-rc.1"
+  },
+  "scripts": {
+    "build:client": "node scripts/build-client.mjs --entry lib/template/client-sample.mjs --out library/laurel-sample/client.js --id laurel-sample"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots",
+        "uiSession"
+      ]
+    }
+  },
+  "private": true
+}

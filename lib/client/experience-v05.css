@@ -1,0 +1,156 @@
+/* Tokens: approved paper palette in getSiPaperPalette; accepted AIC graphite/alloy.
+   Industrial shutters and the day adaptation are Laurel choices, not measured game timings. */
+:root[data-laurel-experience][data-laurel-shell-paint=true]{color-scheme:light dark}
+:root[data-laurel-color=light]{color-scheme:light}
+:root[data-laurel-color=dark]{color-scheme:dark}
+:root[data-laurel-experience][data-laurel-shell-paint=true] body{
+ --dsw-alias-bg-layer-1:var(--lx-bg);--dsw-alias-bg-layer-2:var(--lx-side);--dsw-alias-bg-layer-3:var(--lx-surface);--dsw-alias-bg-layer-4:var(--lx-plate);
+ --dsw-alias-bg-l1:var(--lx-bg);--dsw-alias-bg-overlay:var(--lx-surface);--dsw-alias-bg-module-platform:var(--lx-side);
+ --dsw-alias-interactive-bg-hover:var(--lx-plate);--dsw-alias-interactive-bg-active:var(--lx-selected);--dsw-alias-interactive-bg-multi-select:var(--lx-selected);
+ --dsw-alias-label-primary:var(--lx-text);--dsw-alias-label-secondary:var(--lx-muted);--dsw-alias-label-tertiary:var(--lx-muted);
+ --dsw-alias-border-l1:var(--lx-line);--dsw-alias-border-l2:var(--lx-line);--dsw-alias-border-l3:var(--lx-line);--dsw-alias-border-l4:var(--lx-line);
+ --dsw-alias-text-primary:var(--lx-text);--dsw-alias-text-secondary:var(--lx-muted);--dsw-alias-brand-text:var(--lx-accent);--dsw-focus-ring-color:var(--lx-accent);
+ background:var(--lx-bg);color:var(--lx-text)
+}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [class*=_sidebarCol],:root[data-laurel-experience][data-laurel-shell-paint=true] [data-slot=sidebar],:root[data-laurel-experience][data-laurel-shell-paint=true] .lsf-sidebar{background-color:var(--lx-side)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-content],:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-content]>*,:root[data-laurel-experience][data-laurel-shell-paint=true] [class*=_frame]{background-color:var(--lx-bg);color:var(--lx-text)}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-composer-card]{background-color:var(--lx-surface)!important;color:var(--lx-text)!important;border-color:var(--lx-line)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-row-key]{color:var(--lx-text)}
+:root[data-laurel-experience=industrial] [data-row-key^="session:"][aria-selected=true]{background:var(--lx-selected)!important;color:var(--lx-selectedText)!important;box-shadow:inset 3px 0 0 var(--lx-accent);border-radius:2px}
+:root[data-laurel-experience=industrial] [data-row-key^="session:"]:hover{outline:1px solid var(--lx-line);outline-offset:-1px}
+:root[data-laurel-experience=industrial] [data-slot=sidebar] button[class*=_newSession]{border:1px solid var(--lx-line);background:var(--lx-surface);color:var(--lx-text);border-radius:2px}
+:root[data-laurel-experience][data-laurel-shell-paint=true] :focus-visible{outline-color:var(--lx-accent)}
+.lx-settings{color:var(--lx-text);background:var(--lx-surface);border:1px solid var(--lx-line);padding:0;width:min(780px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);border-radius:3px;font:inherit;box-shadow:0 18px 70px #0005;overflow:hidden}
+.lx-settings::backdrop{background:#0006}
+.lx-header{padding:20px 24px;display:flex;gap:16px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--lx-line)}
+.lx-header small{letter-spacing:2px;color:var(--lx-muted);font-size:10px}.lx-header h2{font-size:22px;font-weight:600;line-height:1.4;margin:5px 0 0}
+.lx-settings button,.lx-settings select{font:inherit;color:var(--lx-text);background:transparent;border:1px solid var(--lx-line);border-radius:2px;padding:8px 12px;cursor:pointer;min-height:38px}
+.lx-settings button:hover{background:var(--lx-plate)}.lx-settings button:disabled{cursor:not-allowed;opacity:.45}.lx-settings button:focus-visible,.lx-settings input:focus-visible,.lx-settings select:focus-visible{outline:2px solid var(--lx-accent);outline-offset:2px}
+.lx-nav{display:flex;padding:0 20px;border-bottom:1px solid var(--lx-line);gap:4px}.lx-nav button{border:0;border-bottom:3px solid transparent;padding:13px 10px;flex:1;white-space:nowrap}.lx-nav [aria-current=page]{border-bottom-color:var(--lx-accent);font-weight:650}
+.lx-body{padding:22px 24px;max-height:calc(100dvh - 240px);overflow:auto;overscroll-behavior:contain}.lx-body h3{margin:0;font-size:18px}.lx-body p{font-size:12px;line-height:1.7;color:var(--lx-muted);margin:8px 0 15px}.lx-body fieldset{border:1px solid var(--lx-line);padding:14px 16px;margin:18px 0 0;min-width:0}.lx-body legend{padding:0 8px;font-size:12px;font-weight:650}
+.lx-body label{display:flex;align-items:center;gap:12px;justify-content:space-between;padding:10px 0;font-size:13px}.lx-body label>select{max-width:55%}.lx-body input[type=checkbox]{width:18px;height:18px;accent-color:var(--lx-accent)}.lx-body input[type=range]{min-width:0;max-width:50%;flex:1;accent-color:var(--lx-accent)}.lx-body output{font-size:12px;min-width:36px;text-align:right}
+.lx-theme-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lx-theme-grid button{text-align:left;padding:14px;border:1px solid var(--lx-line);min-height:72px}.lx-theme-grid small{display:block;color:var(--lx-muted);font-size:11px;margin-top:6px}.lx-theme-grid [aria-pressed=true]{border-color:var(--lx-accent);box-shadow:inset 3px 0 var(--lx-accent);background:var(--lx-plate)}
+.lx-foot{padding:14px 24px;display:flex;gap:16px;justify-content:space-between;align-items:center;border-top:1px solid var(--lx-line)}#lx-feedback{font-size:12px;line-height:1.5;overflow-wrap:anywhere}#lx-feedback[data-error=true]{color:#bd5b4d}.lx-actions{display:flex;flex-wrap:wrap;gap:10px}#lx-modules{display:grid;grid-template-columns:1fr 1fr;gap:8px}#lx-modules button{text-align:left}#lx-diagnostics{display:grid;grid-template-columns:100px 1fr;gap:12px;font-size:13px;overflow-wrap:anywhere}#lx-diagnostics dd{margin:0}
+@media(max-width:520px){.lx-settings{width:calc(100vw - 16px);max-height:calc(100dvh - 16px)}.lx-header,.lx-body,.lx-foot{padding:16px}.lx-nav{padding:0 6px;gap:0}.lx-nav button{font-size:12px;padding:12px 4px}.lx-theme-grid,#lx-modules{grid-template-columns:1fr}.lx-body{max-height:calc(100dvh - 220px)}}
+/* App motion policy is resolved in JS; system preference is optional. */
+
+/* Native rc.5 surface hooks: only paint changes; the host owns geometry and typography. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] body{--dsw-alias-bg-base:var(--lx-bg);--dsw-alias-label-primary-bluish:var(--lx-text);--dsw-alias-button-elevated-fill:var(--lx-surface);--dsw-alias-button-elevated-label:var(--lx-text);--dsw-alias-label-caption:var(--lx-muted);--dsw-alias-interactive-text-active:var(--lx-accent)}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar,:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar-column{background:var(--lx-side)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar :is(button,[data-row-key]){color:var(--lx-text)}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-conversation,:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-conversation-header{background:var(--lx-bg)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-conversation [data-conversation-content]{background:var(--lx-bg)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-user-bubble{background:var(--lx-plate)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-code{background:var(--lx-surface)!important;color:var(--lx-text)!important;border-color:var(--lx-line)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-code :is(code,[class*="_header"]){background:transparent}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar :is([class*="_footArea"],[class*="_logoRow"]){background:transparent!important}
+
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-code{background:var(--lx-surface)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-content] :not(pre)>code{background:var(--lx-plate)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-tabs] [role=tab][aria-selected=true]{color:var(--lx-accent)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-tabs] [role=tab][aria-selected=true]:after{background:var(--lx-accent)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar [class*="_footArea"]:before{background:linear-gradient(transparent,var(--lx-side))!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar [class*="_fade"]{background-image:linear-gradient(transparent,var(--lx-side))!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar [data-laurel-private-footer-control],:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar [data-laurel-private-footer-control] button{background:var(--lx-surface)!important;color:var(--lx-text)!important}
+
+/* Keep native sidebar labels legible across the host's own dark/light marker. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar :is(button,[role=treeitem],input,a,svg){color:var(--lx-text)}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar :is([class*="_name"],[class*="_title"],[class*="_label"],[class*="_icon"]){color:inherit}
+:root[data-laurel-experience=industrial] .lx-sidebar [aria-selected=true]{color:var(--lx-selectedText)!important;background:var(--lx-selected)!important}
+
+/* The restored controls scroll inside the sheet; actions stay within the window. */
+.lx-settings[open]{display:flex;flex-direction:column}
+.lx-header,.lx-nav,.lx-foot{flex-shrink:0}
+.lx-body{flex:1 1 auto;min-height:0;max-height:none}
+
+/* The desktop preload samples this body token for native caption paint. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] body{--dsw-specific-sidebar-fill:var(--lx-side)!important}
+
+/* Native rc.5 code/file cards consume these tokens outside pre as well. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] body{
+ --dsw-alias-markdown-code-block:var(--lx-surface)!important;
+ --dsw-alias-markdown-code-block-banner:var(--lx-plate)!important;
+ --dsw-alias-markdown-inline-code:var(--lx-plate)!important;
+ --dsl-code-block-background:var(--lx-surface);--dsl-code-block-banner-background-color:var(--lx-plate);
+}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-content] [class*="_fileCard"]{background:var(--lx-surface)!important;color:var(--lx-text)!important;border-color:var(--lx-line)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-content] [class*="_fileName"]{color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-conversation-content] [class*="_fileMeta"]{color:var(--lx-muted)!important}
+
+/* Native rc.5 floating/add buttons use these two tokens; keep ink and fill paired. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] body{
+ --dsw-alias-button-floating-fill:var(--lx-surface);--dsw-alias-button-floating-hover:var(--lx-plate);
+ --dsw-specific-selector:var(--lx-plate);--dsw-alias-interactive-bg-hover-solid:var(--lx-selected);
+}
+:root[data-laurel-experience][data-laurel-shell-paint=true] button[class*="_toBottom"]{background:var(--lx-surface)!important;color:var(--lx-text)!important;border:1px solid var(--lx-line)}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-composer-card] button[class*="_add"]{background:var(--lx-plate)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience] .lx-sidebar{box-shadow:var(--lx-shadow-sidebar,none)!important}
+:root[data-laurel-experience] .lx-conversation-header{box-shadow:var(--lx-shadow-header,none)!important}
+:root[data-laurel-experience] [data-composer-card]{box-shadow:inset 0 0 0 1px var(--lx-line),var(--lx-shadow-composer,var(--dsw-elevation-soft))!important}
+/* The isolated negative layer is above its parent's paint and below all content.
+   Global images share viewport coordinates; separate images crop to each region. */
+:root[data-laurel-experience] .lx-wallpaper-surface{isolation:isolate;position:relative;background-image:none!important}
+.lx-wallpaper-layer{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;border-radius:inherit}
+.lx-wallpaper-layer img{position:absolute;max-width:none!important;object-fit:cover;pointer-events:none;user-select:none}
+:root[data-laurel-experience][data-lx-wallpaper=on] .lx-wallpaper-surface :is(.lx-sidebar,.lsf-sidebar,.lsf-conversation,[data-conversation-content],[data-conversation-content]>*,[class*="_frame"]){background:transparent!important}
+:root[data-laurel-experience] .lx-wallpaper-surface .lx-conversation-header{background:color-mix(in srgb,var(--lx-bg) 88%,transparent)!important}
+:root[data-lx-wallpaper=on] .lsf-paper-fibre{display:none}
+.lx-wallpaper-preview{height:88px;background-color:var(--lx-bg);background-position:center;background-size:cover;border:1px solid var(--lx-line);margin:6px 0}
+.lx-body .lx-file-button{display:inline-flex;justify-content:center;min-height:38px;box-sizing:border-box;border:1px solid var(--lx-line);padding:8px 12px;cursor:pointer;position:relative}
+.lx-file-button input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.lx-file-button:focus-within{outline:2px solid var(--lx-accent);outline-offset:2px}
+.lx-shadow-row{border-bottom:1px solid var(--lx-line);padding:12px 0}.lx-shadow-row:last-of-type{border:0}.lx-shadow-row strong{font-size:13px;font-weight:600}
+.lx-body [hidden]{display:none!important}
+
+/* The same settings sheet can become a modeless live adjustment window. */
+.lx-window-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px}
+.lx-window-actions [hidden]{display:none!important}
+.lx-settings[data-floating=true]{position:fixed;margin:0;box-sizing:border-box;z-index:1000001;max-height:calc(100dvh - 16px);min-width:0;min-height:0}
+.lx-settings[data-floating=true] .lx-header{padding:12px 16px;gap:8px;cursor:move;touch-action:none;user-select:none;flex-wrap:wrap}
+.lx-settings[data-floating=true] .lx-header h2{font-size:18px;margin-top:2px}
+.lx-settings[data-floating=true] .lx-header:focus-visible{outline:2px solid var(--lx-accent);outline-offset:-3px}
+.lx-settings[data-floating=true] .lx-window-actions button{padding:6px 8px;font-size:12px;min-height:34px}
+.lx-settings[data-floating=true] .lx-nav{display:grid;grid-template-columns:1fr 1fr;padding:0 10px;gap:0}
+.lx-settings[data-floating=true] .lx-nav button{padding:9px 4px;font-size:12px}
+.lx-settings[data-floating=true] .lx-body{padding:16px;max-height:none}
+.lx-settings[data-floating=true] .lx-body fieldset{padding:10px}
+.lx-settings[data-floating=true] .lx-body label{gap:8px}
+.lx-settings[data-floating=true] .lx-theme-grid{grid-template-columns:1fr}
+.lx-settings[data-floating=true] .lx-foot{padding:10px 16px}
+.lx-settings[data-manipulating=true]{user-select:none}
+.lx-resize-grip{display:none;position:absolute;z-index:3;touch-action:none}
+.lx-settings[data-floating=true] .lx-resize-grip{display:block}
+.lx-resize-grip[data-lx-resize=n],.lx-resize-grip[data-lx-resize=s]{left:12px;right:12px;height:7px;cursor:ns-resize}
+.lx-resize-grip[data-lx-resize=n]{top:0}.lx-resize-grip[data-lx-resize=s]{bottom:0}
+.lx-resize-grip[data-lx-resize=e],.lx-resize-grip[data-lx-resize=w]{top:12px;bottom:12px;width:7px;cursor:ew-resize}
+.lx-resize-grip[data-lx-resize=e]{right:0}.lx-resize-grip[data-lx-resize=w]{left:0}
+.lx-resize-grip:is([data-lx-resize=ne],[data-lx-resize=nw],[data-lx-resize=se],[data-lx-resize=sw]){width:13px;height:13px}
+.lx-resize-grip[data-lx-resize=ne]{top:0;right:0;cursor:nesw-resize}.lx-resize-grip[data-lx-resize=nw]{top:0;left:0;cursor:nwse-resize}
+.lx-resize-grip[data-lx-resize=se]{bottom:0;right:0;cursor:nwse-resize;border-right:2px solid var(--lx-muted);border-bottom:2px solid var(--lx-muted)}.lx-resize-grip[data-lx-resize=sw]{bottom:0;left:0;cursor:nesw-resize}
+.lx-wallpaper-layer img{z-index:1}.lx-wallpaper-extra{position:absolute;pointer-events:none;z-index:0}
+.lx-wallpaper-layer [hidden]{display:none!important}
+/* rc.5 sticky composer paint otherwise covers the wallpaper with a black band. */
+:root[data-laurel-experience][data-lx-wallpaper=on] .lx-wallpaper-surface [class*="_composerSeat"]{background:transparent!important}
+
+/* Windows native option popups need an explicit paired foreground and fill. */
+.lx-settings select option{color:var(--lx-text);background:var(--lx-surface)}
+
+/* Clip each shadow to its designated edge; oversized ink has no visible side caps. */
+.lx-edge-shadow{position:fixed;z-index:8;pointer-events:none;user-select:none;contain:strict;overflow:hidden}
+.lx-edge-shadow-ink{position:absolute;pointer-events:none}
+
+/* Native panel states consume dedicated sidebar tokens in the desktop host. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] body{
+ --dsw-specific-sidebar-nav-item-hover:var(--lx-plate)!important;
+ --dsw-specific-sidebar-nav-item-active:var(--lx-selected)!important;
+ --dsw-specific-sidebar-nav-item-active-accent:var(--lx-selected)!important;
+}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar nav button:hover{background:var(--lx-plate)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar nav :is(button[class*="_panelActive"],button[aria-current=page],button[aria-selected=true]){background:var(--lx-selected)!important;color:var(--lx-selectedText)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar nav :is(button[class*="_panelActive"],button[aria-current=page],button[aria-selected=true]) svg{color:inherit}
+
+/* rc.5 settings uses a body portal and aria-current=true, outside .lx-sidebar.
+   Reuse each palette's paired foreground; its dark industrial selection is light. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-shortcut-modal=settings] button[class*="_navCell"]:hover{background:var(--lx-plate)!important;color:var(--lx-text)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-shortcut-modal=settings] button[class*="_navCell"][aria-current=true]{background:var(--lx-selected)!important;color:var(--lx-selectedText)!important}
+:root[data-laurel-experience][data-laurel-shell-paint=true] [data-shortcut-modal=settings] button[class*="_navCell"] :is(svg,[class*="_navLabel"]){color:inherit}

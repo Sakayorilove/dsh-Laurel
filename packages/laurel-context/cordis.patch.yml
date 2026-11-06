@@ -1,0 +1,30 @@
+# laurel-context —— 独立上下文压缩模块挂进 profile 的那一层。
+#
+# 与记忆核心完全独立：这一行不 inject memory-core，关掉记忆核心它照常工作。
+- id: context-compress
+  name: laurel-context
+  config:
+    # 压缩只由 Laurel 自己跑：不依赖、也不让位给其它压缩插件。
+    # 三档：zero | balanced | full。默认零推理（机械摘要，不发网络请求）。
+    tier: zero
+    # 是否接管宿主 ctx.compaction。默认 true。
+    # 落点不是根层 provide（到不了 agent 预设组的 isolate 域），
+    # 而是 lib/overlay.mjs 的 internal/config 钩子：把预设组里的
+    # `@deepseek-ai/dsh-compaction-basic` 行换成 `laurel-context/compaction`。
+    # isolate 保留不动，`@deepseek-ai/dsh-command-compact` 保留（/compact 不丢）。
+    takeoverHostCompaction: true
+    # 摘要守门：接在任意摘要引擎之后，缺关键约束就让调用方退回原视图。
+    # 零推理、不需要模型、不改被检查的引擎。实测外部摘要引擎的真实摘要里
+    # 限制条件只保留约 11%，而没有任何一层会拦。
+    guard:
+      enabled: true
+      # 加权丢失超过这个比例就拒（限制/错误权重最高）
+      maxWeightedLoss: 0.35
+      # 关键项（限制/错误）默认零容忍
+      allowCriticalLoss: false
+    # 压缩触发：按压力与可回收收益，不按固定轮数。
+    # 不写死具体阈值 —— 交给 TIER_POLICY[tier].trigger（zero 0.72 / balanced 0.78 / full 0.82）。
+    # 需要覆盖时显式写 triggerRatio（0<r<=1），不写就当没配。
+    # limitTokens 同理不写死：真实上下文窗口来自宿主投影
+    # sessionProjections.cachedSnapshot(session, ['contextPressure','tokenUsage']).values.contextPressure.contextWindow。
+    vaultDir: ""
