@@ -11,7 +11,9 @@ const guard = fileURLToPath(new URL('../.github/privacy-guard/privacy-guard.mjs'
 function fixture(fn) {
   const root=mkdtempSync(join(tmpdir(),'laurel-privacy-')),repo=join(root,'repo'),home=join(root,'rules')
   mkdirSync(repo);mkdirSync(home)
-  const env={...process.env,PRIVACY_GUARD_HOME:home}
+  const env={...process.env}
+  for (const key of ['GIT_DIR','GIT_WORK_TREE','GIT_INDEX_FILE','GIT_OBJECT_DIRECTORY','GIT_COMMON_DIR','GIT_ALTERNATE_OBJECT_DIRECTORIES','GIT_NAMESPACE','GIT_PREFIX']) delete env[key]
+  env.PRIVACY_GUARD_HOME=home
   const git=(...args)=>spawnSync('git',args,{cwd:repo,env,encoding:'utf8'})
   assert.equal(git('init','-q','-b','main').status,0)
   git('config','user.name','Test');git('config','user.email','test@example.com')
