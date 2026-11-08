@@ -2,7 +2,7 @@
 
 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的控制中心与模块商店：先安装控制中心，再在模块列表里按需下载功能模块。模块独立启用、独立更新，配置与数据保留。
 
-当前版本 **1.9.2**（预发布）。控制中心和模块分别检测更新：启动后检查，此后每六小时检查，也可手动检查。发现更新时显示常驻提示，点击进入「模块商店与更新」。模块支持独立更新、回退与卸载，保留既有配置和数据；控制中心更新成功后需要完全退出并重新打开 DSH。
+当前版本 **1.9.3**（预发布）。控制中心和模块分别检测更新：启动后检查，此后每六小时检查，也可手动检查。发现更新时显示常驻提示，点击进入「模块商店与更新」。模块支持独立更新、回退与卸载，保留既有配置和数据；控制中心更新成功后需要完全退出并重新打开 DSH。
 
 ## 六个模块
 
@@ -36,7 +36,7 @@
 ```sh
 npx --yes pnpm@11.28.3 install --frozen-lockfile --ignore-scripts
 npx --yes pnpm@11.28.3 run build:client
-npx --yes pnpm@11.28.3 pack          # 得到 laurel-center-1.9.2.tgz
+npx --yes pnpm@11.28.3 pack          # 得到 laurel-center-1.9.3.tgz
 ```
 
 然后在 Harness 里「插件 → 添加插件 → 安装第三方插件」，选这个 tgz，装完**完全退出**（含托盘）再打开。
@@ -45,7 +45,7 @@ npx --yes pnpm@11.28.3 pack          # 得到 laurel-center-1.9.2.tgz
 
 ```sh
 cd ~/.dsh/profiles/desktop          # Windows: %USERPROFILE%\.dsh\profiles\desktop
-pnpm add "file:/绝对路径/laurel-center-1.9.2.tgz"
+pnpm add "file:/绝对路径/laurel-center-1.9.3.tgz"
 ```
 
 装完同样要完全退出再打开。不要用比客户端更新的 pnpm 大版本，那可能重写整个 profile 的 lockfile。
