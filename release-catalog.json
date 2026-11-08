@@ -30,6 +30,21 @@
     "retired": false,
     "releases": [
       {
+        "version": "1.9.3",
+        "sha256": "c8736b1f3482da21fb383a1fc48ff4a156bed0c1bfedc62f6d2247fcbca6a667",
+        "bytes": 1192899,
+        "url": "https://github.com/Sakayorilove/dsh-Laurel/releases/download/v1.9.3/laurel-center-1.9.3.tgz",
+        "centerApi": 1,
+        "hostVersions": [
+          "0.2.1-rc.5",
+          "0.2.2-rc.1"
+        ],
+        "dependencies": [],
+        "notes": "",
+        "dataSchema": 1,
+        "published": true
+      },
+      {
         "version": "1.9.2",
         "sha256": "68f109a302c9913ce0c949954f80c0e8cdbaa1e24be9634b637b4e7e2a5c8f3d",
         "bytes": 1190003,
