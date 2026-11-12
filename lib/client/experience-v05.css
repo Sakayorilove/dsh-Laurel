@@ -154,3 +154,23 @@
 :root[data-laurel-experience][data-laurel-shell-paint=true] [data-shortcut-modal=settings] button[class*="_navCell"]:hover{background:var(--lx-plate)!important;color:var(--lx-text)!important}
 :root[data-laurel-experience][data-laurel-shell-paint=true] [data-shortcut-modal=settings] button[class*="_navCell"][aria-current=true]{background:var(--lx-selected)!important;color:var(--lx-selectedText)!important}
 :root[data-laurel-experience][data-laurel-shell-paint=true] [data-shortcut-modal=settings] button[class*="_navCell"] :is(svg,[class*="_navLabel"]){color:inherit}
+
+/* Native MenuSurface paints a separate material child, including body portals.
+   Pair that fill, group headings and icons with the existing Laurel palette. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] body{
+ --dsw-menu-surface-fill:var(--lx-surface)!important;
+ --dsw-specific-menu:var(--lx-surface)!important;
+ --dsw-alias-menu-group-header-fill:var(--lx-surface)!important;
+ --dsw-alias-menu-icon:var(--lx-text)!important;
+ --dsw-alias-label-primary-dimmed:var(--lx-text);
+}
+
+/* Row ink already follows the live brush tone, including its erase phase.
+   Native action buttons and their SVGs must inherit that ink instead of the
+   sidebar's ordinary text colour. The host still owns their visibility. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar [data-row-key^="session:"] [class*="_rowActions"] :is(button,svg){color:inherit!important}
+
+/* The real brush feathers out beneath the rightmost archive icon. Reuse its
+   existing dark ink-shadow pigment so the light glyph has a solid backing
+   even beyond that feathered edge. Keep the native button's exact rectangle. */
+:root[data-laurel-experience][data-laurel-shell-paint=true] .lx-sidebar .lsf-session[data-brush-tone=light] [class*="_rowActions"] button{background:#071923}

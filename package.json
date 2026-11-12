@@ -1,6 +1,6 @@
 {
   "name": "laurel-center",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "private": true,
   "description": "Laurel 控制中心：按需安装模块、独立更新、保留配置与数据。",
   "license": "MIT",
